@@ -71,7 +71,7 @@ const CourtInfo = () => {
             </div>
 
             <div className="header-actions">
-              c<button className="action-btn" title="Yêu thích">❤️</button>
+              <button className="action-btn" title="Yêu thích">❤️</button>
               <button className="action-btn" title="Chia sẻ">🔗</button>
             </div>
           </div>

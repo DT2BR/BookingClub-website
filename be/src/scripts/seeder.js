@@ -18,14 +18,10 @@ const importData = async () => {
 
         const data = JSON.parse(fs.readFileSync("./src/scripts/data.json", "utf-8"));
         // 1. XÓA TRƯỚC
-    await BookingDetails.deleteMany();
-    await Booking.deleteMany();
-    await Review.deleteMany();
     await SubField.deleteMany();
     await PricingRule.deleteMany();
     await ImageField.deleteMany();
     await SportComplex.deleteMany();
-    //await User.deleteMany(); // Owner cũng nằm trong đây
     await FieldTypeConfig.deleteMany();
     // 2. INSERT THEO THỨ TỰ
 
@@ -37,11 +33,6 @@ const importData = async () => {
     await SubField.create(data.SubField);
     await ImageField.create(data.FieldImage);
     await PricingRule.create(data.PricingRule);
-
-    await Booking.create(data.Booking);
-    await BookingDetails.create(data.BookingDetails);
-    await Review.create(data.Review);
-
 
         console.log("Du lieu da duoc import thanh cong!");
         process.exit(0);

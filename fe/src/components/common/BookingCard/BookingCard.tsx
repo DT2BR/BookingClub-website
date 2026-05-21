@@ -74,7 +74,6 @@ const BookingCard: React.FC<BookingCardProps> = ({
     return savedCart ? JSON.parse(savedCart) : {};
   });
   const { slug } = useParams();
-
   const [selectedDate, setSelectedDate] = useState<string>(() => {
     const savedDate = sessionStorage.getItem('bookingDate');
     return savedDate || new Date().toISOString().split('T')[0];
@@ -367,7 +366,7 @@ const BookingCard: React.FC<BookingCardProps> = ({
     setCart({});
     setSelectedCourtId("");
     setCourtDetail(null);
-
+    console.log("Dữ liệu booking gửi đi:", bookingPayload);
     navigate(`/complexes/${bookingPayload.complex_id}/booking/confirm`, {
       state: {
         bookingData: bookingPayload,

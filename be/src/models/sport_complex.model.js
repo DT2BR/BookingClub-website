@@ -50,6 +50,7 @@ const sportComplexSchema = new mongoose.Schema({
     },
     sport_type:{
         type: String,
+        enum: ["badminton", "football", "tennis", "basketball", "volleyball", "pickleball", "padel", "golf", "complex"],
         required: true
     },
     email:{

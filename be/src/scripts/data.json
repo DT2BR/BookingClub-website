@@ -59,7 +59,160 @@
     "approval_status": "Approved",
     "verified_at": "2024-03-11T00:00:00Z",
     "created_at": "2024-03-11T00:00:00Z"
-  }
+  },
+  {
+    "_id": "65f1a1a1a1a1a1a1a1a1a1a3",
+    "name": "Le Thi E",
+    "phone": "0903333444",
+    "password": "$2b$10$hashedpassword5",
+    "email": "owner3@example.com",
+    "email_verified": true,
+    "status": "Active",
+    "role": "Owner",
+    "id_card_number": "098765432109",
+    "business_license": "https://example.com/license3.jpg",
+    "bank_info": {
+      "bank_name": "Vietinbank",
+      "account_number": "111111111"
+    },
+    "approval_status": "Approved",
+    "verified_at": "2024-03-12T00:00:00Z",
+    "created_at": "2024-03-12T00:00:00Z"
+  },
+
+  {
+      "_id": "65f1a1a1a1a1a1a1a1a1a1a4",
+      "name": "Lê Hoàng Long",
+      "phone": "0934567890",
+      "password": "$2b$10$hashedpassword6",
+      "email": "owner4@example.com",
+      "email_verified": true,
+      "status": "Active",
+      "role": "Owner",
+      "id_card_number": "023456789012",
+      "business_license": "https://example.com/license4.jpg",
+      "bank_info": {
+        "bank_name": "ACB",
+        "account_number": "444455556666"
+      },
+      "approval_status": "Approved",
+      "verified_at": "2026-01-10T00:00:00Z",
+      "created_at": "2026-01-10T00:00:00Z"
+    },
+    {
+      "_id": "65f1a1a1a1a1a1a1a1a1a1a5",
+      "name": "Vũ Minh Tuấn",
+      "phone": "0945678901",
+      "password": "$2b$10$hashedpassword7",
+      "email": "owner5@example.com",
+      "email_verified": true,
+      "status": "Active",
+      "role": "Owner",
+      "id_card_number": "034567890123",
+      "business_license": "https://example.com/license5.jpg",
+      "bank_info": {
+        "bank_name": "MBBank",
+        "account_number": "555566667777"
+      },
+      "approval_status": "Approved",
+      "verified_at": "2026-01-15T00:00:00Z",
+      "created_at": "2026-01-15T00:00:00Z"
+    },
+    {
+      "_id": "65f1a1a1a1a1a1a1a1a1a1a6",
+      "name": "Nguyễn Thị Mai",
+      "phone": "0956789012",
+      "password": "$2b$10$hashedpassword8",
+      "email": "owner6@example.com",
+      "email_verified": true,
+      "status": "Active",
+      "role": "Owner",
+      "id_card_number": "045678901234",
+      "business_license": "https://example.com/license6.jpg",
+      "bank_info": {
+        "bank_name": "Sacombank",
+        "account_number": "666677778888"
+      },
+      "approval_status": "Approved",
+      "verified_at": "2026-02-01T00:00:00Z",
+      "created_at": "2026-02-01T00:00:00Z"
+    },
+    {
+      "_id": "65f1a1a1a1a1a1a1a1a1a1a7",
+      "name": "Phan Văn Đức",
+      "phone": "0967890123",
+      "password": "$2b$10$hashedpassword9",
+      "email": "owner7@example.com",
+      "email_verified": true,
+      "status": "Active",
+      "role": "Owner",
+      "id_card_number": "056789012345",
+      "business_license": "https://example.com/license7.jpg",
+      "bank_info": {
+        "bank_name": "VPBank",
+        "account_number": "777788889999"
+      },
+      "approval_status": "Approved",
+      "verified_at": "2026-02-10T00:00:00Z",
+      "created_at": "2026-02-10T00:00:00Z"
+    },
+    {
+      "_id": "65f1a1a1a1a1a1a1a1a1a1a8",
+      "name": "Đỗ Hoàng Bách",
+      "phone": "0978901234",
+      "password": "$2b$10$hashedpassword10",
+      "email": "owner8@example.com",
+      "email_verified": true,
+      "status": "Active",
+      "role": "Owner",
+      "id_card_number": "067890123456",
+      "business_license": "https://example.com/license8.jpg",
+      "bank_info": {
+        "bank_name": "TPBank",
+        "account_number": "888899990000"
+      },
+      "approval_status": "Approved",
+      "verified_at": "2026-02-20T00:00:00Z",
+      "created_at": "2026-02-20T00:00:00Z"
+    },
+    {
+      "_id": "65f1a1a1a1a1a1a1a1a1a1a9",
+      "name": "Lý Thu Thảo",
+      "phone": "0989012345",
+      "password": "$2b$10$hashedpassword11",
+      "email": "owner9@example.com",
+      "email_verified": true,
+      "status": "Active",
+      "role": "Owner",
+      "id_card_number": "078901234567",
+      "business_license": "https://example.com/license9.jpg",
+      "bank_info": {
+        "bank_name": "Vietinbank",
+        "account_number": "999900001111"
+      },
+      "approval_status": "Approved",
+      "verified_at": "2026-03-01T00:00:00Z",
+      "created_at": "2026-03-01T00:00:00Z"
+    },
+    {
+      "_id": "65f1a1a1a1a1a1a1a1a1a1aa",
+      "name": "Trần Bảo Lâm",
+      "phone": "0990123456",
+      "password": "$2b$10$hashedpassword12",
+      "email": "owner10@example.com",
+      "email_verified": true,
+      "status": "Active",
+      "role": "Owner",
+      "id_card_number": "089012345678",
+      "business_license": "https://example.com/license10.jpg",
+      "bank_info": {
+        "bank_name": "HDBank",
+        "account_number": "111122223333"
+      },
+      "approval_status": "Approved",
+      "verified_at": "2026-03-05T00:00:00Z",
+      "created_at": "2026-03-05T00:00:00Z"
+    }
   ],
 
   "Review": [
@@ -201,12 +354,14 @@
       },
       "sport_type": "complex",
       "phone": "0901234567",
+      "sport_type": "complex",
       "email": "contact@namsaigon.com",
       "slug": "san-mega-pickleball-pong",
       "opening_hours": "06:00",
       "closing_hours": "22:00",
       "created_at":  "2024-03-15T00:00:00Z" 
     },
+
     {
       "_id": "65f1a2b3c4d5e6f7a8b90124",
       "owner_id": "65f1a1a1a1a1a1a1a1a1a1a2",
@@ -221,12 +376,147 @@
       },
       "sport_type": "football",
       "phone": "02838112233",
+      "sport_type": "complex",
       "email": null,
       "slug": "san-bong-thang-long",
       "opening_hours": "07:00",
       "closing_hours": "23:00",
       "created_at":  "2024-03-16T00:00:00Z" 
+    },
+
+    {
+      "_id": "65f1a2b3c4d5e6f7a8b90125",
+      "owner_id": "65f1a1a1a1a1a1a1a1a1a1a3",
+      "name": "Sân cầu lông Vy Phong",
+      "address": "Phú Định, Quận 8, TP.HCM",
+      "city": "TPHCM",
+      "district": "Quan 8",
+      "location": {
+        "type": "Point",
+        "coordinates": [106.6286, 10.7222]
+      },
+      "phone": "0398690986",
+      "sport_type": "badminton",
+      "email": null,
+      "slug": "san-cau-long-vy-phong",
+      "opening_hours": "06:00",
+      "closing_hours": "23:00",
+      "created_at":  "2024-03-17T00:00:00Z"
+    },
+
+    {
+      "_id": "65f1a2b3c4d5e6f7a8b90126",
+      "owner_id": "65f1a1a1a1a1a1a1a1a1a1a4",
+      "name": "Trung Tâm Thể Thao Đa Năng Bình Thạnh",
+      "address": "Phan Đăng Lưu, Quận Bình Thạnh, TP.HCM",
+      "city": "TPHCM",
+      "district": "Binh Thanh",
+      "location": { "type": "Point", "coordinates": [106.6985, 10.8015] },
+      "phone": "02835511222",
+      "sport_type": "complex",
+      "email": "contact@binhthanhsport.com",
+      "slug": "trung-tam-the-thao-da-nang-binh-thanh",
+      "opening_hours": "06:00",
+      "closing_hours": "22:00",
+      "created_at": "2026-01-12T00:00:00Z"
+    },
+    {
+      "_id": "65f1a2b3c4d5e6f7a8b90127",
+      "owner_id": "65f1a1a1a1a1a1a1a1a1a1a5",
+      "name": "Sân Pickleball Thành Thái Q10",
+      "address": "Thành Thái, Quận 10, TP.HCM",
+      "city": "TPHCM",
+      "district": "Quan 10",
+      "location": { "type": "Point", "coordinates": [106.7688, 10.7688] },
+      "phone": "0945678901",
+      "sport_type": "complex",
+      "email": null,
+      "slug": "san-pickleball-thanh-thai-q10",
+      "opening_hours": "06:00",
+      "closing_hours": "23:00",
+      "created_at": "2026-01-18T00:00:00Z"
+    },
+    {
+      "_id": "65f1a2b3c4d5e6f7a8b90128",
+      "owner_id": "65f1a1a1a1a1a1a1a1a1a1a6",
+      "name": "Sân Bóng Đá Tiểu Ngư",
+      "address": "Sư Vạn Hạnh, Quận 10, TP.HCM",
+      "city": "TPHCM",
+      "district": "Quan 10",
+      "location": { "type": "Point", "coordinates": [106.7742, 10.7742] },
+      "phone": "02838642315",
+      "sport_type": "football",
+      "email": "tieungusport@gmail.com",
+      "slug": "san-bong-da-tieu-ngu",
+      "opening_hours": "06:00",
+      "closing_hours": "22:00",
+      "created_at": "2026-02-03T00:00:00Z"
+    },
+    {
+      "_id": "65f1a2b3c4d5e6f7a8b90129",
+      "owner_id": "65f1a1a1a1a1a1a1a1a1a1a7",
+      "name": "Matchup Sports Complex- Pickleball",
+      "address": "Nguyễn Văn Hưởng, Thảo Điền, Quận 2, TP.HCM",
+      "city": "TPHCM",
+      "district": "Quan 2",
+      "location": { "type": "Point", "coordinates": [106.7324, 10.8095] },
+      "phone": "0967890123",
+      "sport_type": "pickleball",
+      "email": "matchupsport@thaodiansport.vn",
+      "slug": "matchup-sports-complex-pickleball",
+      "opening_hours": "06:00",
+      "closing_hours": "22:00",
+      "created_at": "2026-02-12T00:00:00Z"
+    },
+    {
+      "_id": "65f1a2b3c4d5e6f7a8b9012a",
+      "owner_id": "65f1a1a1a1a1a1a1a1a1a1a8",
+      "name": "Trung tâm Thể dục Thể thao Rạch Miễu",
+      "address": "Hoa Phượng, Quận Phú Nhuận, TP.HCM",
+      "city": "TPHCM",
+      "district": "Phu Nhuan",
+      "location": { "type": "Point", "coordinates": [106.6871, 10.7962] },
+      "phone": "02839951133",
+      "sport_type": "complex",
+      "email": null,
+      "slug": "trung-tam-the-duc-the-thao-rach-mieu",
+      "opening_hours": "06:00",
+      "closing_hours": "23:00",
+      "created_at": "2026-02-22T00:00:00Z"
+    },
+    {
+      "_id": "65f1a2b3c4d5e6f7a8b9012b",
+      "owner_id": "65f1a1a1a1a1a1a1a1a1a1a9",
+      "name": "CLB Thể Thao Tân Sơn Nhất",
+      "address": "Tân Sơn, Quận Tân Bình, TP.HCM",
+      "city": "TPHCM",
+      "district": "Tan Binh",
+      "location": { "type": "Point", "coordinates": [106.6438, 10.8212] },
+      "phone": "0989012345",
+      "sport_type": "football",
+      "email": "tansonnhatclub@yahoo.com",
+      "slug": "clb-the-thao-tan-son-nhat",
+      "opening_hours": "06:00",
+      "closing_hours": "22:00",
+      "created_at": "2026-03-03T00:00:00Z"
+    },
+    {
+      "_id": "65f1a2b3c4d5e6f7a8b9012c",
+      "owner_id": "65f1a1a1a1a1a1a1a1a1a1aa",
+      "name": "Sân Bóng Phú Thọ",
+      "address": "Lý Thường Kiệt, Quận 11, TP.HCM",
+      "city": "TPHCM",
+      "district": "Quan 11",
+      "location": { "type": "Point", "coordinates": [106.7678, 10.7678] },
+      "phone": "02838651478",
+      "sport_type": "football",
+      "email": "phuthosport@hcm.vnn.vn",
+      "slug": "san-bong-phu-tho",
+      "opening_hours": "06:00",
+      "closing_hours": "22:00",
+      "created_at": "2026-03-07T00:00:00Z"
     }
+
   ],
 
  "SubField": [
@@ -258,6 +548,7 @@
     "field_name": "Sân cầu lông B2",
     "status": "Maintenance"
   },
+
   {
     "_id": "65f1b1b1b1b1b1b1b1b1b107",
     "complex_id": "65f1a2b3c4d5e6f7a8b90124",
@@ -273,13 +564,6 @@
     "status": "Available"
   },
   {
-    "_id": "65f1b1b1b1b1b1b1b1b1b109",
-    "complex_id": "65f1a2b3c4d5e6f7a8b90123",
-    "config_id": "65f1d1d1d1d1d1d1d1d1d105",
-    "field_name": "Sân bóng chuyền E1",
-    "status": "Booked"
-  },
-  {
   "_id": "65f1b1b1b1b1b1b1b1b1b110",
   "complex_id": "65f1a2b3c4d5e6f7a8b90123",
   "config_id": "65f1d1d1d1d1d1d1d1d1d106",
@@ -292,7 +576,64 @@
   "config_id": "65f1d1d1d1d1d1d1d1d1d106",
   "field_name": "Sân pickleball P2",
   "status": "Booked"
-}
+},
+
+{
+  "_id": "65f1b1b1b1b1b1b1b1b1b112",
+  "complex_id": "65f1a2b3c4d5e6f7a8b90125",
+  "config_id": "65f1d1d1d1d1d1d1d1d1d107",
+  "field_name": "Sân câu lông Vy Phong A1",
+  "status": "Available"
+},
+{
+  "_id": "65f1b1b1b1b1b1b1b1b1b113",
+  "complex_id": "65f1a2b3c4d5e6f7a8b90125",
+  "config_id": "65f1d1d1d1d1d1d1d1d1d107",
+  "field_name": "Sân câu lông Vy Phong A2",
+  "status": "Available"
+},
+{
+  "_id": "65f1b1b1b1b1b1b1b1b1b114",
+  "complex_id": "65f1a2b3c4d5e6f7a8b90125",
+  "config_id": "65f1d1d1d1d1d1d1d1d1d107",
+  "field_name": "Sân câu lông Vy Phong A3",
+  "status": "Available"
+},
+
+    { "_id": "65f1b1b1b1b1b1b1b1b1b201", "complex_id": "65f1a2b3c4d5e6f7a8b90126", "config_id": "65f1d1d1d1d1d1d1d1d1d201", "field_name": "Sân Cầu Lông BT1", "status": "Available" },
+    { "_id": "65f1b1b1b1b1b1b1b1b1b202", "complex_id": "65f1a2b3c4d5e6f7a8b90126", "config_id": "65f1d1d1d1d1d1d1d1d1d201", "field_name": "Sân Cầu Lông BT2", "status": "Available" },
+    { "_id": "65f1b1b1b1b1b1b1b1b1b203", "complex_id": "65f1a2b3c4d5e6f7a8b90126", "config_id": "65f1d1d1d1d1d1d1d1d1d202", "field_name": "Sân Bóng Đá BT5", "status": "Available" },
+
+    
+    { "_id": "65f1b1b1b1b1b1b1b1b1b204", "complex_id": "65f1a2b3c4d5e6f7a8b90127", "config_id": "65f1d1d1d1d1d1d1d1d1d203", "field_name": "Sân Pickleball Q10-1", "status": "Available" },
+    { "_id": "65f1b1b1b1b1b1b1b1b1b205", "complex_id": "65f1a2b3c4d5e6f7a8b90127", "config_id": "65f1d1d1d1d1d1d1d1d1d203", "field_name": "Sân Pickleball Q10-2", "status": "Booked" },
+    { "_id": "65f1b1b1b1b1b1b1b1b1b206", "complex_id": "65f1a2b3c4d5e6f7a8b90127", "config_id": "65f1d1d1d1d1d1d1d1d1d204", "field_name": "Sân Cầu Lông Q10-3", "status": "Available" },
+
+    
+    { "_id": "65f1b1b1b1b1b1b1b1b1b207", "complex_id": "65f1a2b3c4d5e6f7a8b90128", "config_id": "65f1d1d1d1d1d1d1d1d1d205", "field_name": "Sân Tieu Ngu A", "status": "Available" },
+    { "_id": "65f1b1b1b1b1b1b1b1b1b208", "complex_id": "65f1a2b3c4d5e6f7a8b90128", "config_id": "65f1d1d1d1d1d1d1d1d1d205", "field_name": "Sân Tieu Ngu B", "status": "Available" },
+    { "_id": "65f1b1b1b1b1b1b1b1b1b209", "complex_id": "65f1a2b3c4d5e6f7a8b90128", "config_id": "65f1d1d1d1d1d1d1d1d1d205", "field_name": "Sân Tieu Ngu C", "status": "Maintenance" },
+
+    
+    { "_id": "65f1b1b1b1b1b1b1b1b1b20a", "complex_id": "65f1a2b3c4d5e6f7a8b90129", "config_id": "65f1d1d1d1d1d1d1d1d1d207", "field_name": "Sân Pickleball TD1", "status": "Available" },
+    { "_id": "65f1b1b1b1b1b1b1b1b1b20b", "complex_id": "65f1a2b3c4d5e6f7a8b90129", "config_id": "65f1d1d1d1d1d1d1d1d1d207", "field_name": "Sân Pickleball TD2", "status": "Available" },
+    { "_id": "65f1b1b1b1b1b1b1b1b1b20c", "complex_id": "65f1a2b3c4d5e6f7a8b90129", "config_id": "65f1d1d1d1d1d1d1d1d1d207", "field_name": "Sân Pickleball TD3", "status": "Available" },
+
+    
+    { "_id": "65f1b1b1b1b1b1b1b1b1b20d", "complex_id": "65f1a2b3c4d5e6f7a8b9012a", "config_id": "65f1d1d1d1d1d1d1d1d1d208", "field_name": "Sân Tennis RM1", "status": "Available" },
+    { "_id": "65f1b1b1b1b1b1b1b1b1b20e", "complex_id": "65f1a2b3c4d5e6f7a8b9012a", "config_id": "65f1d1d1d1d1d1d1d1d1d209", "field_name": "Sân Cầu Lông RM2", "status": "Booked" },
+    { "_id": "65f1b1b1b1b1b1b1b1b1b20f", "complex_id": "65f1a2b3c4d5e6f7a8b9012a", "config_id": "65f1d1d1d1d1d1d1d1d1d209", "field_name": "Sân Cầu Lông RM3", "status": "Available" },
+
+    
+    { "_id": "65f1b1b1b1b1b1b1b1b1b210", "complex_id": "65f1a2b3c4d5e6f7a8b9012b", "config_id": "65f1d1d1d1d1d1d1d1d1d20a", "field_name": "Sân Bóng Đá TSN1", "status": "Available" },
+    { "_id": "65f1b1b1b1b1b1b1b1b1b211", "complex_id": "65f1a2b3c4d5e6f7a8b9012b", "config_id": "65f1d1d1d1d1d1d1d1d1d20a", "field_name": "Sân Bóng Đá TSN2", "status": "Available" },
+    { "_id": "65f1b1b1b1b1b1b1b1b1b212", "complex_id": "65f1a2b3c4d5e6f7a8b9012b", "config_id": "65f1d1d1d1d1d1d1d1d1d20a", "field_name": "Sân Bóng Đá TSN3", "status": "Available" },
+
+    
+    { "_id": "65f1b1b1b1b1b1b1b1b1b213", "complex_id": "65f1a2b3c4d5e6f7a8b9012c", "config_id": "65f1d1d1d1d1d1d1d1d1d20c", "field_name": "Sân Phú Thọ 1", "status": "Available" },
+    { "_id": "65f1b1b1b1b1b1b1b1b1b214", "complex_id": "65f1a2b3c4d5e6f7a8b9012c", "config_id": "65f1d1d1d1d1d1d1d1d1d20c", "field_name": "Sân Phú Thọ 2", "status": "Available" },
+    { "_id": "65f1b1b1b1b1b1b1b1b1b215", "complex_id": "65f1a2b3c4d5e6f7a8b9012c", "config_id": "65f1d1d1d1d1d1d1d1d1d20c", "field_name": "Sân Phú Thọ 3", "status": "Booked" }
+
 ],
 
   "FieldImage": [
@@ -323,6 +664,7 @@
       "alt_text": "Khu vực thay đồ và nhà vệ sinh sạch sẽ",
       "created_at": "2024-03-15T10:10:00Z"
     },
+
     {
       "_id": "65f1d1d1b1b1b1b1b1b1b105",
       "complex_id": "65f1a2b3c4d5e6f7a8b90124",
@@ -331,7 +673,82 @@
       "is_primary": true,
       "alt_text": "Sân bóng Thăng Long lung linh dưới ánh đèn đêm",
       "created_at": "2024-03-16T11:00:00Z"
-    }
+    },
+    {
+      "_id": "65f1d1d1b1b1b1b1b1b1b106",
+      "complex_id": "65f1a2b3c4d5e6f7a8b90124",
+      "image_url": "https://top10tphcm.com/wp-content/uploads/2020/11/San-bong-da-thang-long-2.jpg",
+      "image_type": "Other",
+      "is_primary": false,
+      "alt_text": "San con bong da thang long",
+      "created_at": "2024-03-16T11:05:00Z"
+    },
+    {
+      "_id": "65f1d1d1b1b1b1b1b1b1b107",
+      "complex_id": "65f1a2b3c4d5e6f7a8b90124",
+      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCOw5kRShUT7E7MrClOQUZG8nB6rulrs-gGw&s",
+      "image_type": "Other",
+      "is_primary": false,
+      "alt_text": "Logo sân bóng Thăng Long",
+      "created_at": "2024-03-16T11:10:00Z"
+    },
+
+    {
+      "_id": "65f1d1d1b1b1b1b1b1b1b108",
+      "complex_id": "65f1a2b3c4d5e6f7a8b90125",
+      "image_url": "https://shopvnb.com/uploads/tin_tuc/san-cau-long-vy-phong-3_1718840331.webp",
+      "image_type": "Overall",
+      "is_primary": true,
+      "alt_text": "Sân cầu lông Vy Phong với không gian thoáng đãng",
+      "created_at": "2024-03-17T12:00:00Z"
+    },
+    {
+      "_id": "65f1d1d1b1b1b1b1b1b1b109",
+      "complex_id": "65f1a2b3c4d5e6f7a8b90125",
+      "image_url": "https://cdn.shopvnb.com/uploads/images/tin_tuc/san-cau-long-vy-phong-3-1718840335.webp",
+      "image_type": "Price",
+      "is_primary": false,
+      "alt_text": "Bảng giá dịch vụ sân cầu lông Vy Phong năm 2026",
+      "created_at": "2024-03-17T12:05:00Z"
+    },
+    {
+      "_id": "65f1d1d1b1b1b1b1b1b1b110",
+      "complex_id": "65f1a2b3c4d5e6f7a8b90125",
+      "image_url": "https://img.thegioithethao.vn/thumbs/san-cau-long/ho-chi-minh/quan-8/san-cau-long-vy-phong/san-cau-long-vy-phong-4_thumb_150.webp",
+      "image_type": "Other",
+      "is_primary": false,
+      "alt_text": "Khu vực sân con cầu lông Vy Phong với sàn gỗ chất lượng cao",
+      "created_at": "2024-03-17T12:10:00Z"
+    },
+    { "_id": "65f1d1d1b1b1b1b1b1b1b201", "complex_id": "65f1a2b3c4d5e6f7a8b90126", "image_url": "https://hvshop.vn/wp-content/uploads/2024/09/san-cau-long-phan-dang-luu-3.webp", "image_type": "Overall", "is_primary": true, "alt_text": "Toàn cảnh sân Bình Thạnh", "created_at": "2026-01-12T10:00:00Z" },
+    { "_id": "65f1d1d1b1b1b1b1b1b1b202", "complex_id": "65f1a2b3c4d5e6f7a8b90126", "image_url": "https://img.thegioithethao.vn/media/san-bong-da/ho-chi-minh/quan-binh-thanh/san-bong-da-trung-tam-the-duc-the-thao-binh-thanh/san-bong-trung-tam-the-duc-the-thao-binh-thanh-3.webp", "image_type": "Other", "is_primary": false, "alt_text": "Khu vực sân cầu lông sân Bình Thạnh", "created_at": "2026-01-12T10:05:00Z" },
+    { "_id": "65f1d1d1b1b1b1b1b1b1b203", "complex_id": "65f1a2b3c4d5e6f7a8b90126", "image_url": "https://img.thegioithethao.vn/thumbs/san-bong-da/ho-chi-minh/quan-binh-thanh/san-bong-da-trung-tam-the-duc-the-thao-binh-thanh/san-bong-trung-tam-the-duc-the-thao-binh-thanh-1_thumb_720.webp", "image_type": "Price", "is_primary": false, "alt_text": "Bảng giá dịch vụ sân Bình Thạnh năm 2026", "created_at": "2026-01-12T10:10:00Z" },
+    
+    { "_id": "65f1d1d1b1b1b1b1b1b1b204", "complex_id": "65f1a2b3c4d5e6f7a8b90127", "image_url": "https://shopvnb.com/uploads/images/tin_tuc/san-pickleball-thanh-thai-1-1721268349.webp", "image_type": "Overall", "is_primary": true, "alt_text": "Sân Pickleball Q10", "created_at": "2026-01-18T10:00:00Z" },
+    { "_id": "65f1d1d1b1b1b1b1b1b1b205", "complex_id": "65f1a2b3c4d5e6f7a8b90127", "image_url": "https://cdn.shopvnb.com/uploads/images/tin_tuc/san-pickleball-thanh-thai-3-1721268351.webp", "image_type": "Other", "is_primary": false, "alt_text": "Khu vực sân Pickleball Q10", "created_at": "2026-01-18T10:05:00Z" },
+    { "_id": "65f1d1d1b1b1b1b1b1b1b206", "complex_id": "65f1a2b3c4d5e6f7a8b90127", "image_url": "https://anthaiautoparts.com/wp-content/uploads/2024/06/pickleball-1024x682.jpeg", "image_type": "Price", "is_primary": false, "alt_text": "Bảng giá dịch vụ sân Pickleball Q10 năm 2026", "created_at": "2026-01-18T10:10:00Z" },
+    
+    { "_id": "65f1d1d1b1b1b1b1b1b1b207", "complex_id": "65f1a2b3c4d5e6f7a8b90128", "image_url": "https://img.thegioithethao.vn/thumbs/san-bong-da/ho-chi-minh/quan-10/san-so-2-phu-tho-cong-ly-thuong-kiet/san-so-2-phu-tho-cong-ly-thuong-kiet-3_thumb_500.webp", "image_type": "Overall", "is_primary": true, "alt_text": "Sân bóng đá Tiểu Ngư vào ban ngày", "created_at": "2026-02-03T10:00:00Z" },
+    { "_id": "65f1d1d1b1b1b1b1b1b1b208", "complex_id": "65f1a2b3c4d5e6f7a8b90128", "image_url": "https://img.thegioithethao.vn/thumbs/san-bong-da/ho-chi-minh/quan-10/san-tieu-ngu/san-bong-da-tieu-ngu-1_thumb_150.webp", "image_type": "Other", "is_primary": false, "alt_text": "Khu vực sân bóng đá Tiểu Ngư với cỏ nhân tạo chất lượng cao", "created_at": "2026-02-03T10:05:00Z" },
+    { "_id": "65f1d1d1b1b1b1b1b1b1b209", "complex_id": "65f1a2b3c4d5e6f7a8b90128", "image_url": "https://media.tuanviet.vn/media/thi-cong-san-bong-da/kich-thuoc-san-bong-da-mini-5-nguoi/kich-thuoc-san-bong-da-mini-5-nguoi.webp", "image_type": "Price", "is_primary": false, "alt_text": "Bảng giá dịch vụ sân bóng đá Tiểu Ngư năm 2026", "created_at": "2026-02-03T10:10:00Z" },
+
+    { "_id": "65f1d1d1b1b1b1b1b1b1b210", "complex_id": "65f1a2b3c4d5e6f7a8b90129", "image_url": "https://cdn-img.thethao247.vn/origin_640x0/storage/files/btvttqt4/2025/09/26/9-68d611222193e.jpg", "image_type": "Overall", "is_primary": true, "alt_text": "Sân Pickleball Thảo Điền", "created_at": "2026-02-12T10:00:00Z" },
+    { "_id": "65f1d1d1b1b1b1b1b1b1b211", "complex_id": "65f1a2b3c4d5e6f7a8b90129", "image_url": "https://img.thegioithethao.vn/thumbs/san-picklebakll/ho-chi-minh/thu-duc/san-pickleball-matchup-sports-complex/3_thumb_720.jpg", "image_type": "Other", "is_primary": false, "alt_text": "Khu vực sân Pickleball Thảo Điền với mặt sân chất lượng cao", "created_at": "2026-02-12T10:05:00Z" },
+    { "_id": "65f1d1d1b1b1b1b1b1b1b212", "complex_id": "65f1a2b3c4d5e6f7a8b90129", "image_url": "https://kenh14cdn.com/203336854389633024/2025/9/26/matchup3-17587907935801562913674-1758848246219-17588482466281107058499.jpg", "image_type": "Price", "is_primary": false, "alt_text": "Bảng giá dịch vụ sân Pickleball Thảo Điền năm 2026", "created_at": "2026-02-12T10:10:00Z" },
+
+    { "_id": "65f1d1d1b1b1b1b1b1b1b213", "complex_id": "65f1a2b3c4d5e6f7a8b9012a", "image_url": "https://nugym.vn/wp-content/uploads/2025/12/san-cau-long-trung-tam-the-duc-the-thao-rach-mieu-2.webp-2.webp", "image_type": "Overall", "is_primary": true, "alt_text": "Sân tennis Rạch Miễu", "created_at": "2026-02-22T10:00:00Z" },
+    { "_id": "65f1d1d1b1b1b1b1b1b1b214", "complex_id": "65f1a2b3c4d5e6f7a8b9012a", "image_url": "https://nhathidaurachmieu.com/wp-content/uploads/2025/05/banner-nha-thi-dau-rach-mieu-1024x427.jpg", "image_type": "Other", "is_primary": false, "alt_text": "Khu vực sân tennis Rạch Miễu với mặt sân chất lượng cao", "created_at": "2026-02-22T10:05:00Z" },
+    { "_id": "65f1d1d1b1b1b1b1b1b1b215", "complex_id": "65f1a2b3c4d5e6f7a8b9012a", "image_url": "https://nhathidaurachmieu.com/wp-content/uploads/2025/05/banner-nha-thi-dau-rach-mieu-2-1024x427.jpg", "image_type": "Price", "is_primary": false, "alt_text": "Bảng giá dịch vụ sân tennis Rạch Miễu năm 2026", "created_at": "2026-02-22T10:10:00Z" },
+
+    { "_id": "65f1d1d1b1b1b1b1b1b1b216", "complex_id": "65f1a2b3c4d5e6f7a8b9012b", "image_url": "https://img.thegioithethao.vn/thumbs/san-bong-da/ho-chi-minh/quan-tan-binh/san-bong-h2-tan-son/san-bong-h2-tan-son-3_thumb_150.webp", "image_type": "Overall", "is_primary": true, "alt_text": "CLB Tân Sơn Nhất", "created_at": "2026-03-03T10:00:00Z" },
+    { "_id": "65f1d1d1b1b1b1b1b1b1b217", "complex_id": "65f1a2b3c4d5e6f7a8b9012b", "image_url": "https://atsport.vn/wp-content/uploads/2023/11/San-bong-co-nhan-tao-h2-tan-son-e1701151807932.jpg", "image_type": "Other", "is_primary": false, "alt_text": "Khu vực CLB Tân Sơn Nhất", "created_at": "2026-03-03T10:05:00Z" },
+    { "_id": "65f1d1d1b1b1b1b1b1b1b218", "complex_id": "65f1a2b3c4d5e6f7a8b9012b", "image_url": "https://img.thegioithethao.vn/thumbs/san-bong-da/ho-chi-minh/quan-tan-binh/san-bong-h2-tan-son/san-bong-h2-tan-son-3_thumb_150.webp", "image_type": "Price", "is_primary": false, "alt_text": "Bảng giá dịch vụ CLB Tân Sơn Nhất năm 2026", "created_at": "2026-03-03T10:10:00Z" },
+    
+    { "_id": "65f1d1d1b1b1b1b1b1b1b219", "complex_id": "65f1a2b3c4d5e6f7a8b9012c", "image_url": "https://meetup.vn/wp-content/uploads/2025/06/TOP-10-SAN-BONG-DA-PHUI-TAI-TPHCM-NAM-2023.jpg", "image_type": "Overall", "is_primary": true, "alt_text": "Sân bóng đá Phú Thọ", "created_at": "2026-03-07T10:00:00Z" },
+    { "_id": "65f1d1d1b1b1b1b1b1b1b220", "complex_id": "65f1a2b3c4d5e6f7a8b9012c", "image_url": "https://img.thegioithethao.vn/thumbs/san-bong-da/ho-chi-minh/quan-11/san-bong-da-nha-thi-dau-the-duc-the-thao-phu-tho/1_thumb_500.webp", "image_type": "Other", "is_primary": false, "alt_text": "Khu vực sân bóng đá Phú Thọ với mặt sân chất lượng cao", "created_at": "2026-03-07T10:05:00Z" },
+    { "_id": "65f1d1d1b1b1b1b1b1b1b221", "complex_id": "65f1a2b3c4d5e6f7a8b9012c", "image_url": "https://static.tuoitre.vn/tto/i/s626/2003/11/16/OFxSCZD4.jpg", "image_type": "Price", "is_primary": false, "alt_text": "Bảng giá dịch vụ sân bóng đá Phú Thọ năm 2026", "created_at": "2026-03-07T10:10:00Z" }
+
+
   ],
 
 "FieldTypeConfig": [
@@ -380,17 +797,6 @@
     "is_active": true
   },
   {
-    "_id": "65f1d1d1d1d1d1d1d1d1d105",
-    "complex_id": "65f1a2b3c4d5e6f7a8b90123",
-    "field_type": "volleyball",
-    "base_price": 100000,
-    "min_duration": 60,
-    "slot_step": 30,
-    "buffer_time": 5,
-    "description": "Sân bóng chuyền ngoài trời",
-    "is_active": true
-  },
-  {
   "_id": "65f1d1d1d1d1d1d1d1d1d106",
   "complex_id": "65f1a2b3c4d5e6f7a8b90123",
   "field_type": "pickleball",
@@ -398,26 +804,41 @@
   "min_duration": 60,
   "slot_step": 30,
   "buffer_time": 5,
-  "description": "Sân pickleball tiêu chuẩn trong nhà",
+  "description": "Sân pickleball tiêu chuẩn trong nhà mega pickleball & pong",
   "is_active": true
-  } 
+  },
+  {
+  "_id": "65f1d1d1d1d1d1d1d1d1d107",
+  "complex_id": "65f1a2b3c4d5e6f7a8b90125",
+  "field_type": "badminton",
+  "base_price": 70000,
+  "min_duration": 60,
+  "slot_step": 30,
+  "buffer_time": 5,
+  "description": "Sân cầu lông tiêu chuẩn vy phong",
+  "is_active": true
+},
+    { "_id": "65f1d1d1d1d1d1d1d1d1d201", "complex_id": "65f1a2b3c4d5e6f7a8b90126", "field_type": "badminton", "base_price": 75000, "min_duration": 60, "slot_step": 30, "buffer_time": 5, "description": "Sân cầu lông trong nhà", "is_active": true },
+    { "_id": "65f1d1d1d1d1d1d1d1d1d202", "complex_id": "65f1a2b3c4d5e6f7a8b90126", "field_type": "football", "base_price": 250000, "min_duration": 90, "slot_step": 30, "buffer_time": 10, "description": "Sân cỏ nhân tạo 5 người", "is_active": true },
+
+    { "_id": "65f1d1d1d1d1d1d1d1d1d203", "complex_id": "65f1a2b3c4d5e6f7a8b90127", "field_type": "pickleball", "base_price": 100000, "min_duration": 60, "slot_step": 30, "buffer_time": 5, "description": "Sân pickleball ngoài trời có mái che", "is_active": true },
+    { "_id": "65f1d1d1d1d1d1d1d1d1d204", "complex_id": "65f1a2b3c4d5e6f7a8b90127", "field_type": "badminton", "base_price": 80000, "min_duration": 60, "slot_step": 30, "buffer_time": 5, "description": "Sân cầu lông thảm chuẩn quốc tế", "is_active": true },
+
+    { "_id": "65f1d1d1d1d1d1d1d1d1d205", "complex_id": "65f1a2b3c4d5e6f7a8b90128", "field_type": "football", "base_price": 220000, "min_duration": 90, "slot_step": 30, "buffer_time": 10, "description": "Sân 5 Người Tiểu Ngư trung tâm quận 10", "is_active": true },
+
+    { "_id": "65f1d1d1d1d1d1d1d1d1d207", "complex_id": "65f1a2b3c4d5e6f7a8b90129", "field_type": "pickleball", "base_price": 150000, "min_duration": 60, "slot_step": 30, "buffer_time": 5, "description": "Sân pickleball sàn gỗ", "is_active": true },
+
+    { "_id": "65f1d1d1d1d1d1d1d1d1d208", "complex_id": "65f1a2b3c4d5e6f7a8b9012a", "field_type": "tennis", "base_price": 160000, "min_duration": 60, "slot_step": 30, "buffer_time": 10, "description": "Sân Tennis Rạch Miễu ngoài trời", "is_active": true },
+    { "_id": "65f1d1d1d1d1d1d1d1d1d209", "complex_id": "65f1a2b3c4d5e6f7a8b9012a", "field_type": "badminton", "base_price": 85000, "min_duration": 60, "slot_step": 30, "buffer_time": 5, "description": "Sân cầu lông Rạch Miễu", "is_active": true },
+
+    { "_id": "65f1d1d1d1d1d1d1d1d1d20a", "complex_id": "65f1a2b3c4d5e6f7a8b9012b", "field_type": "football", "base_price": 240000, "min_duration": 90, "slot_step": 30, "buffer_time": 10, "description": "Sân đá banh mini TSN", "is_active": true },
+
+    { "_id": "65f1d1d1d1d1d1d1d1d1d20c", "complex_id": "65f1a2b3c4d5e6f7a8b9012c", "field_type": "football", "base_price": 260000, "min_duration": 90, "slot_step": 30, "buffer_time": 10, "description": "Sân bóng cỏ tự nhiên/nhân tạo Phú Thọ", "is_active": true }
 ],
 
 
   "PricingRule": [
-  {
-    "_id": "65f1c1c1c1c1c1c1c1c1c101",
-    "complex_id": "65f1a2b3c4d5e6f7a8b90123",
-    "config_id": "65f1d1d1d1d1d1d1d1d1d101",
-    "rule_name": "Giờ cao điểm bóng đá",
-    "day_of_week": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-    "start_hour": "17:00",
-    "end_hour": "21:00",
-    "price_multiplier": 1.5,
-    "priority": 2,
-    "is_active": true
-  },
-  {
+   {
     "_id": "65f1c1c1c1c1c1c1c1c1c103",
     "complex_id": "65f1a2b3c4d5e6f7a8b90123",
     "config_id": "65f1d1d1d1d1d1d1d1d1d101",
@@ -429,15 +850,88 @@
     "priority": 1,
     "is_active": true
   },
+    {
+    "_id": "65f1c1c1c1c1c1c1c1c1c101",
+    "complex_id": "65f1a2b3c4d5e6f7a8b90123",
+    "config_id": "65f1d1d1d1d1d1d1d1d1d101",
+    "rule_name": "Giờ cao điểm bóng đá",
+    "day_of_week": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "start_hour": "17:00",
+    "end_hour": "21:00",
+    "price_multiplier": 1.5,
+    "priority": 2,
+    "is_active": true
+  },
+ 
+  {
+    "_id": "65f1c1c1c1c1c1c1c1c1c124",
+    "complex_id": "65f1a2b3c4d5e6f7a8b90123",
+    "config_id": "65f1d1d1d1d1d1d1d1d1d102",
+    "rule_name": "Bóng đá cuối tuần",
+    "day_of_week": ["Saturday","Sunday"],
+    "start_hour": "06:00",
+    "end_hour": "21:00",
+    "price_multiplier": 1.5,
+    "priority": 2,
+    "is_active": true
+  },
+  {
+    "_id": "65f1c1c1c1c1c1c1c1c1c115",
+    "complex_id": "65f1a2b3c4d5e6f7a8b90123",
+    "config_id": "65f1d1d1d1d1d1d1d1d1d102",
+    "rule_name": "Cầu lông giờ thường",
+    "day_of_week": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "start_hour": "06:00",
+    "end_hour": "18:00",
+    "price_multiplier": 1.0,
+    "priority": 1,
+    "is_active": true
+  },
   {
     "_id": "65f1c1c1c1c1c1c1c1c1c104",
     "complex_id": "65f1a2b3c4d5e6f7a8b90123",
     "config_id": "65f1d1d1d1d1d1d1d1d1d102",
-    "rule_name": "Cầu lông buổi tối",
+    "rule_name": "Cầu lông giờ cao điểm",
     "day_of_week": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
     "start_hour": "18:00",
     "end_hour": "22:00",
     "price_multiplier": 1.3,
+    "priority": 2,
+    "is_active": true
+  },
+  {
+    "_id": "65f1c1c1c1c1c1c1c1c1c156",
+    "complex_id": "65f1a2b3c4d5e6f7a8b90123",
+    "config_id": "65f1d1d1d1d1d1d1d1d1d103",
+    "rule_name": "Cầu lông cuối tuần",
+    "day_of_week": ["Saturday","Sunday"],
+    "start_hour": "06:00",
+    "end_hour": "22:00",
+    "price_multiplier": 1.5,
+    "priority": 2,
+    "is_active": true
+  },
+  {
+    "_id": "65f1c1c1c1c1c1c1c1c1a998",
+    "complex_id": "65f1a2b3c4d5e6f7a8b90124",
+    "config_id": "65f1d1d1d1d1d1d1d1d1d102",
+    "rule_name": "Tennis giờ thường",
+    "day_of_week": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "start_hour": "06:00",
+    "end_hour": "18:00",
+    "price_multiplier": 1.0,
+    "priority": 1,
+    "is_active": true
+  },
+  {
+    "_id": "65f1c1c1c1c1c1c1c1c1c1aa",
+    "complex_id": "65f1a2b3c4d5e6f7a8b90124",
+    "config_id": "65f1d1d1d1d1d1d1d1d1d102",
+    "rule_name": "Tennis giờ cao điểm",
+    "day_of_week": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "start_hour": "18:00",
+    "end_hour": "22:00",
+    "price_multiplier": 1.5,
     "priority": 2,
     "is_active": true
   },
@@ -466,6 +960,54 @@
     "is_active": true
   },
   {
+    "_id": "65f1c1c1c1c1c1c1c1c1c178",
+    "complex_id": "65f1a2b3c4d5e6f7a8b90124",
+    "config_id": "65f1d1d1d1d1d1d1d1d1d104",
+    "rule_name": "Basketball giờ cao điểm",
+    "day_of_week": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "start_hour": "18:00",
+    "end_hour": "22:00",
+    "price_multiplier": 1.4,
+    "priority": 2,
+    "is_active": true
+  },
+  {
+    "_id": "65f1c1c1c1c1c1c1c1c1c435",
+    "complex_id": "65f1a2b3c4d5e6f7a8b90124",
+    "config_id": "65f1d1d1d1d1d1d1d1d1d104",
+    "rule_name": "Basketball cuối tuần",
+    "day_of_week": ["Saturday","Sunday"],
+    "start_hour": "06:00",
+    "end_hour": "22:00",
+    "price_multiplier": 1.6,
+    "priority": 2,
+    "is_active": true
+  },
+  {
+    "_id": "65f1c1c1c1c1c1c1c1c1c345",
+    "complex_id": "65f1a2b3c4d5e6f7a8b90123",
+    "config_id": "65f1d1d1d1d1d1d1d1d1d101",
+    "rule_name": "Bóng đá cuối tuần",
+    "day_of_week": ["Saturday","Sunday"],
+    "start_hour": "06:00",
+    "end_hour": "21:00",
+    "price_multiplier": 1.5,
+    "priority": 2,
+    "is_active": true
+  },
+  {
+  "_id": "65f1c1c1c1c1c1c1c1c1c108",
+  "complex_id": "65f1a2b3c4d5e6f7a8b90123",
+  "config_id": "65f1d1d1d1d1d1d1d1d1d106",
+  "rule_name": "Pickleball giờ thường",
+  "day_of_week": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+  "start_hour": "06:00",
+  "end_hour": "18:00",
+  "price_multiplier": 1.0,
+  "priority": 1,
+  "is_active": true
+  },
+  {
   "_id": "65f1c1c1c1c1c1c1c1c1c107",
   "complex_id": "65f1a2b3c4d5e6f7a8b90123",
   "config_id": "65f1d1d1d1d1d1d1d1d1d106",
@@ -478,16 +1020,93 @@
   "is_active": true
 },
 {
-  "_id": "65f1c1c1c1c1c1c1c1c1c108",
+  "_id": "65f1c1c1c1c1c1c1c1c1c139",
   "complex_id": "65f1a2b3c4d5e6f7a8b90123",
   "config_id": "65f1d1d1d1d1d1d1d1d1d106",
-  "rule_name": "Pickleball giờ thường",
+  "rule_name": "Pickleball cuối tuần",
+  "day_of_week": ["Saturday","Sunday"],
+  "start_hour": "06:00",
+  "end_hour": "22:00",
+  "price_multiplier": 1.5,
+  "priority": 2,
+  "is_active": true
+},
+{
+  "_id": "65f1c1c1c1c1c1c1c1c1c109",
+  "complex_id": "65f1a2b3c4d5e6f7a8b90125",
+  "config_id": "65f1d1d1d1d1d1d1d1d1d107",
+  "rule_name": "Cầu lông Vy Phong giờ thường",
   "day_of_week": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
   "start_hour": "06:00",
-  "end_hour": "18:00",
-  "price_multiplier": 1.0,
+  "end_hour": "16:00",
+  "price_multiplier": 1,
   "priority": 1,
   "is_active": true
-}
+},
+{
+  "_id": "65f1c1c1c1c1c1c1c1c1c110",
+  "complex_id": "65f1a2b3c4d5e6f7a8b90125",
+  "config_id": "65f1d1d1d1d1d1d1d1d1d107",
+  "rule_name": "Cầu lông Vy Phong giờ cao điểm",
+  "day_of_week": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+  "start_hour": "16:00",
+  "end_hour": "23:00",
+  "price_multiplier": 1.3,
+  "priority": 1,
+  "is_active": true
+},
+{
+  "_id": "65f1c1c1c1c1c1c1c1c1c111",
+  "complex_id": "65f1a2b3c4d5e6f7a8b90125",
+  "config_id": "65f1d1d1d1d1d1d1d1d1d107",
+  "rule_name": "Cầu lông Vy Phong cuối tuần",
+  "day_of_week": ["Saturday","Sunday"],
+  "start_hour": "06:00",
+  "end_hour": "23:00",
+  "price_multiplier": 1.5,
+  "priority": 1,
+  "is_active": true
+},
+    { "_id": "65f1c1c1c1c1c1c1c1c1c201", "complex_id": "65f1a2b3c4d5e6f7a8b90126", "config_id": "65f1d1d1d1d1d1d1d1d1d201", "rule_name": "Cầu lông giờ thường", "day_of_week": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "start_hour": "06:00", "end_hour": "17:00", "price_multiplier": 1.0, "priority": 1, "is_active": true },
+    { "_id": "65f1c1c1c1c1c1c1c1c1c202", "complex_id": "65f1a2b3c4d5e6f7a8b90126", "config_id": "65f1d1d1d1d1d1d1d1d1d201", "rule_name": "Cầu lông giờ cao điểm", "day_of_week": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "start_hour": "17:00", "end_hour": "22:00", "price_multiplier": 1.4, "priority": 2, "is_active": true },
+    { "_id": "65f1c1c1c1c1c1c1c1c1c203", "complex_id": "65f1a2b3c4d5e6f7a8b90126", "config_id": "65f1d1d1d1d1d1d1d1d1d201", "rule_name": "Cầu lông cuối tuần", "day_of_week": ["Saturday","Sunday"], "start_hour": "06:00", "end_hour": "22:00", "price_multiplier": 1.5, "priority": 1, "is_active": true },
+
+    { "_id": "65f1c1c1c1c1c1c1c1c1c204", "complex_id": "65f1a2b3c4d5e6f7a8b90126", "config_id": "65f1d1d1d1d1d1d1d1d1d202", "rule_name": "Bóng đá giờ thường", "day_of_week": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "start_hour": "06:00", "end_hour": "16:00", "price_multiplier": 1.0, "priority": 1, "is_active": true },
+    { "_id": "65f1c1c1c1c1c1c1c1c1c205", "complex_id": "65f1a2b3c4d5e6f7a8b90126", "config_id": "65f1d1d1d1d1d1d1d1d1d202", "rule_name": "Bóng đá giờ cao điểm", "day_of_week": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "start_hour": "16:00", "end_hour": "22:00", "price_multiplier": 1.5, "priority": 2, "is_active": true },
+    { "_id": "65f1c1c1c1c1c1c1c1c1c206", "complex_id": "65f1a2b3c4d5e6f7a8b90126", "config_id": "65f1d1d1d1d1d1d1d1d1d202", "rule_name": "Bóng đá cuối tuần", "day_of_week": ["Saturday","Sunday"], "start_hour": "06:00", "end_hour": "22:00", "price_multiplier": 1.6, "priority": 1, "is_active": true },
+
+    { "_id": "65f1c1c1c1c1c1c1c1c1c207", "complex_id": "65f1a2b3c4d5e6f7a8b90127", "config_id": "65f1d1d1d1d1d1d1d1d1d203", "rule_name": "Pickleball giờ thường", "day_of_week": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "start_hour": "06:00", "end_hour": "17:00", "price_multiplier": 1.0, "priority": 1, "is_active": true },
+    { "_id": "65f1c1c1c1c1c1c1c1c1c208", "complex_id": "65f1a2b3c4d5e6f7a8b90127", "config_id": "65f1d1d1d1d1d1d1d1d1d203", "rule_name": "Pickleball giờ cao điểm", "day_of_week": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "start_hour": "17:00", "end_hour": "23:00", "price_multiplier": 1.4, "priority": 2, "is_active": true },
+    { "_id": "65f1c1c1c1c1c1c1c1c1c209", "complex_id": "65f1a2b3c4d5e6f7a8b90127", "config_id": "65f1d1d1d1d1d1d1d1d1d203", "rule_name": "Pickleball cuối tuần", "day_of_week": ["Saturday","Sunday"], "start_hour": "06:00", "end_hour": "23:00", "price_multiplier": 1.5, "priority": 1, "is_active": true },
+
+    { "_id": "65f1c1c1c1c1c1c1c1c1c20a", "complex_id": "65f1a2b3c4d5e6f7a8b90127", "config_id": "65f1d1d1d1d1d1d1d1d1d204", "rule_name": "Cầu lông giờ thường", "day_of_week": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "start_hour": "06:00", "end_hour": "17:00", "price_multiplier": 1.0, "priority": 1, "is_active": true },
+    { "_id": "65f1c1c1c1c1c1c1c1c1c20b", "complex_id": "65f1a2b3c4d5e6f7a8b90127", "config_id": "65f1d1d1d1d1d1d1d1d1d204", "rule_name": "Cầu lông giờ cao điểm", "day_of_week": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "start_hour": "17:00", "end_hour": "23:00", "price_multiplier": 1.3, "priority": 2, "is_active": true },
+    { "_id": "65f1c1c1c1c1c1c1c1c1c20c", "complex_id": "65f1a2b3c4d5e6f7a8b90127", "config_id": "65f1d1d1d1d1d1d1d1d1d204", "rule_name": "Cầu lông cuối tuần", "day_of_week": ["Saturday","Sunday"], "start_hour": "06:00", "end_hour": "23:00", "price_multiplier": 1.5, "priority": 1, "is_active": true },
+
+    { "_id": "65f1c1c1c1c1c1c1c1c1c20d", "complex_id": "65f1a2b3c4d5e6f7a8b90128", "config_id": "65f1d1d1d1d1d1d1d1d1d205", "rule_name": "Đá banh giờ thường", "day_of_week": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "start_hour": "06:00", "end_hour": "16:00", "price_multiplier": 1.0, "priority": 1, "is_active": true },
+    { "_id": "65f1c1c1c1c1c1c1c1c1c20e", "complex_id": "65f1a2b3c4d5e6f7a8b90128", "config_id": "65f1d1d1d1d1d1d1d1d1d205", "rule_name": "Đá banh giờ cao điểm", "day_of_week": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "start_hour": "16:00", "end_hour": "22:00", "price_multiplier": 1.4, "priority": 2, "is_active": true },
+    { "_id": "65f1c1c1c1c1c1c1c1c1c20f", "complex_id": "65f1a2b3c4d5e6f7a8b90128", "config_id": "65f1d1d1d1d1d1d1d1d1d205", "rule_name": "Đá banh cuối tuần", "day_of_week": ["Saturday","Sunday"], "start_hour": "06:00", "end_hour": "22:00", "price_multiplier": 1.5, "priority": 1, "is_active": true },
+
+
+    { "_id": "65f1c1c1c1c1c1c1c1c1c213", "complex_id": "65f1a2b3c4d5e6f7a8b90129", "config_id": "65f1d1d1d1d1d1d1d1d1d207", "rule_name": "Pickleball giờ thường", "day_of_week": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "start_hour": "06:00", "end_hour": "17:00", "price_multiplier": 1.0, "priority": 1, "is_active": true },
+    { "_id": "65f1c1c1c1c1c1c1c1c1c214", "complex_id": "65f1a2b3c4d5e6f7a8b90129", "config_id": "65f1d1d1d1d1d1d1d1d1d207", "rule_name": "Pickleball giờ cao điểm", "day_of_week": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "start_hour": "17:00", "end_hour": "22:00", "price_multiplier": 1.3, "priority": 2, "is_active": true },
+    { "_id": "65f1c1c1c1c1c1c1c1c1c215", "complex_id": "65f1a2b3c4d5e6f7a8b90129", "config_id": "65f1d1d1d1d1d1d1d1d1d207", "rule_name": "Pickleball cuối tuần", "day_of_week": ["Saturday","Sunday"], "start_hour": "06:00", "end_hour": "22:00", "price_multiplier": 1.5, "priority": 1, "is_active": true },
+
+    { "_id": "65f1c1c1c1c1c1c1c1c1c216", "complex_id": "65f1a2b3c4d5e6f7a8b9012a", "config_id": "65f1d1d1d1d1d1d1d1d1d208", "rule_name": "Tennis RM giờ thường", "day_of_week": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "start_hour": "06:00", "end_hour": "17:00", "price_multiplier": 1.0, "priority": 1, "is_active": true },
+    { "_id": "65f1c1c1c1c1c1c1c1c1c217", "complex_id": "65f1a2b3c4d5e6f7a8b9012a", "config_id": "65f1d1d1d1d1d1d1d1d1d208", "rule_name": "Tennis RM giờ cao điểm", "day_of_week": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "start_hour": "17:00", "end_hour": "23:00", "price_multiplier": 1.4, "priority": 2, "is_active": true },
+    { "_id": "65f1c1c1c1c1c1c1c1c1c218", "complex_id": "65f1a2b3c4d5e6f7a8b9012a", "config_id": "65f1d1d1d1d1d1d1d1d1d208", "rule_name": "Tennis RM cuối tuần", "day_of_week": ["Saturday","Sunday"], "start_hour": "06:00", "end_hour": "23:00", "price_multiplier": 1.6, "priority": 1, "is_active": true },
+
+    { "_id": "65f1c1c1c1c1c1c1c1c1c219", "complex_id": "65f1a2b3c4d5e6f7a8b9012a", "config_id": "65f1d1d1d1d1d1d1d1d1d209", "rule_name": "Cầu lông RM giờ thường", "day_of_week": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "start_hour": "06:00", "end_hour": "17:00", "price_multiplier": 1.0, "priority": 1, "is_active": true },
+    { "_id": "65f1c1c1c1c1c1c1c1c1c21a", "complex_id": "65f1a2b3c4d5e6f7a8b9012a", "config_id": "65f1d1d1d1d1d1d1d1d1d209", "rule_name": "Cầu lông RM giờ cao điểm", "day_of_week": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "start_hour": "17:00", "end_hour": "23:00", "price_multiplier": 1.3, "priority": 2, "is_active": true },
+    { "_id": "65f1c1c1c1c1c1c1c1c1c21b", "complex_id": "65f1a2b3c4d5e6f7a8b9012a", "config_id": "65f1d1d1d1d1d1d1d1d1d209", "rule_name": "Cầu lông RM cuối tuần", "day_of_week": ["Saturday","Sunday"], "start_hour": "06:00", "end_hour": "23:00", "price_multiplier": 1.5, "priority": 1, "is_active": true },
+
+    { "_id": "65f1c1c1c1c1c1c1c1c1c21c", "complex_id": "65f1a2b3c4d5e6f7a8b9012b", "config_id": "65f1d1d1d1d1d1d1d1d1d20a", "rule_name": "Đá banh TSN giờ thường", "day_of_week": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "start_hour": "06:00", "end_hour": "16:00", "price_multiplier": 1.0, "priority": 1, "is_active": true },
+    { "_id": "65f1c1c1c1c1c1c1c1c1c21d", "complex_id": "65f1a2b3c4d5e6f7a8b9012b", "config_id": "65f1d1d1d1d1d1d1d1d1d20a", "rule_name": "Đá banh TSN giờ cao điểm", "day_of_week": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "start_hour": "16:00", "end_hour": "22:00", "price_multiplier": 1.5, "priority": 2, "is_active": true },
+    { "_id": "65f1c1c1c1c1c1c1c1c1c21e", "complex_id": "65f1a2b3c4d5e6f7a8b9012b", "config_id": "65f1d1d1d1d1d1d1d1d1d20a", "rule_name": "Đá banh TSN cuối tuần", "day_of_week": ["Saturday","Sunday"], "start_hour": "06:00", "end_hour": "22:00", "price_multiplier": 1.6, "priority": 1, "is_active": true },
+
+
+    { "_id": "65f1c1c1c1c1c1c1c1c1c222", "complex_id": "65f1a2b3c4d5e6f7a8b9012c", "config_id": "65f1d1d1d1d1d1d1d1d1d20c", "rule_name": "Bóng đá Phú Thọ giờ thường", "day_of_week": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "start_hour": "06:00", "end_hour": "16:00", "price_multiplier": 1.0, "priority": 1, "is_active": true },
+    { "_id": "65f1c1c1c1c1c1c1c1c1c223", "complex_id": "65f1a2b3c4d5e6f7a8b9012c", "config_id": "65f1d1d1d1d1d1d1d1d1d20c", "rule_name": "Bóng đá Phú Thọ giờ cao điểm", "day_of_week": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "start_hour": "16:00", "end_hour": "22:00", "price_multiplier": 1.5, "priority": 2, "is_active": true },
+    { "_id": "65f1c1c1c1c1c1c1c1c1c224", "complex_id": "65f1a2b3c4d5e6f7a8b9012c", "config_id": "65f1d1d1d1d1d1d1d1d1d20c", "rule_name": "Bóng đá Phú Thọ cuối tuần", "day_of_week": ["Saturday","Sunday"], "start_hour": "06:00", "end_hour": "22:00", "price_multiplier": 1.7, "priority": 1, "is_active": true }
 ]
 }
