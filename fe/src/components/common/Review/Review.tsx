@@ -1,15 +1,8 @@
 import React from 'react';
 import { StarRating } from '../StarRating/StarRating';
 import './Review.css';
-
-interface ReviewItem {
-  review_id: number;
-  userName: string;
-  avatarUrl?: string;
-  rating: number;
-  comment: string;
-  created_at: string;
-}
+import { type ReviewItem } from '../../../types/review';
+import defaultAvatar from '../../../assets/avatar-placeholder.png';
 
 export interface ReviewProps {
   overallRating: number;
@@ -44,11 +37,14 @@ export const Review: React.FC<ReviewProps> = ({
         {(reviews || []).map((review) => (
           <div key={review.review_id} className="review-card">
             <div className="reviewer-info">
-              {review.avatarUrl ? (
-                <img src={review.avatarUrl} alt="avatar" className="avatar" />
-              ) : (
-                <div className="avatar-placeholder"></div>
-              )}
+              <img
+                src={review.avatarUrl || defaultAvatar}
+                alt="avatar"
+                className="avatar"
+                onError={(e) => {
+                  e.currentTarget.src = defaultAvatar;
+                }}
+              />
               <div className="reviewer-details">
                 <div className="reviewer-name">{review.userName}</div>
                 <div className="individual-rating">
