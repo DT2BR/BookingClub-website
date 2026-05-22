@@ -42,7 +42,6 @@ const ProfilePage: React.FC = () => {
   // Bảo vệ route: Đẩy về trang đăng nhập nếu chưa có user
   useEffect(() => {
     if (!loading && !user) {
-      alert("Bạn chưa đăng nhập");
       navigate("/login");
     }
   }, [user, loading, navigate]);
@@ -160,6 +159,7 @@ const ProfilePage: React.FC = () => {
       localStorage.removeItem("access_token");
       localStorage.removeItem("isLoggedIn"); 
       sessionStorage.clear();
+      setUser(null);
       navigate("/login");
     }
   };

@@ -25,10 +25,6 @@ function Navbar() {
               Tìm kiếm sân
             </Link>
 
-            <Link to="/bookings">
-              Sân đã đặt
-            </Link>
-
             <Link to="/map">
               Bản đồ
             </Link>
@@ -36,7 +32,11 @@ function Navbar() {
             <Link to="/complexes/san-bong-thang-long">
               Test Booking
             </Link>
-            <Link to="/management">Management</Link>
+            {user && (
+              <Link to="/management">
+                Lịch sử đặt sân
+              </Link>
+            )}
             {/* Sau này có thêm thì thêm vào link nữa */}
           </nav>
 
