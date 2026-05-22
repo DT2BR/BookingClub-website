@@ -71,7 +71,7 @@ function FeaturedCourtsSection() {
                 <button
                   onClick={() =>
                     navigate(
-                      `/complexes/${court._id}`
+                      `/complexes/${court.slug}`
                     )
                   }
                 >

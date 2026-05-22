@@ -29,7 +29,7 @@ export default function PaymentSuccess() {
           </div>
         </div>
 
-        <button className="payment-btn" onClick={() => navigate("/me")}>
+        <button className="payment-btn" onClick={() => navigate("/management")}>
           Xem lịch đặt sân
         </button>
         <button className="payment-btn-outline" onClick={() => navigate("/")}>

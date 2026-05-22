@@ -1,11 +1,9 @@
 .hero-section {
   /* margin-top: 40px; */
 
-  background: linear-gradient(
-    135deg,
-    #4e7ec7 0%,
-    #7fa6df 100%
-  );
+  background: linear-gradient(135deg,
+      #4e7ec7 0%,
+      #7fa6df 100%);
 
   /* border-radius: 32px; */
 
@@ -146,6 +144,13 @@
 
 .hero-court-info h3 {
   color: white;
+}
+
+.hero-primary-btn,
+.hero-secondary-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 /* .hero-search {

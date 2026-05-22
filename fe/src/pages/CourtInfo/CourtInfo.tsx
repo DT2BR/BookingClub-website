@@ -7,6 +7,8 @@ import BookingCard from "../../components/common/BookingCard/BookingCard";
 import Review from "../../components/common/Review/Review"
 import SubFieldList from "../../features/SubFieldList/SubFieldList";
 import {getSportDetail, type SportComplexDetail, type SubFieldDetail} from "../../services/sportDetail.api";
+import { type ReviewStats } from "../../types/review";
+import { getReviewStats } from "../../services/review.api";
 
 const CourtInfo = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -15,6 +17,7 @@ const CourtInfo = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
   const [selectedCourtId, setSelectedCourtId] = useState<string | undefined>(undefined);
+  const [reviewStats, setReviewStats] = useState<ReviewStats | null>(null);
 
   useEffect(() => {
     if (slug) {
@@ -46,6 +49,19 @@ const CourtInfo = () => {
         }
     })) || [];
   }, [court]);
+
+  const complexId = court?.id;
+
+  useEffect(() => {
+    if (!complexId) return;
+    getReviewStats(complexId)
+      .then((data) => {
+        setReviewStats(data);
+      })
+      .catch((err) => {
+        console.error("Review error", err);
+      });
+  }, [complexId]);
 
   // Xử lý các trạng thái 
   if (!slug) return <div>Đường dẫn không hợp lệ.</div>;
@@ -119,10 +135,12 @@ const CourtInfo = () => {
 
           <section className="court-reviews-wrapper">
             <Review
-              overallRating={court?.rating || 0}
-              totalReviews={court?.totalReviews || 0}
-              reviews={court?.reviews || []}
-              onShowAllClick={() => console.log("Mở modal xem hết review")}
+              overallRating={reviewStats?.avgRating || 0}
+              totalReviews={reviewStats?.totalReviews || 0}
+              reviews={reviewStats?.reviews || []}
+              onShowAllClick={() =>
+                  console.log("Mở modal xem hết review")
+              }
             />
           </section>
         </div>

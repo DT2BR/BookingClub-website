@@ -1,4 +1,9 @@
 import { useNavigate } from "react-router-dom";
+import {
+  CalendarDays,
+  Eye,
+  MapPinned,
+} from "lucide-react";
 
 import { featuredCourt } from "../mockData";
 
@@ -31,20 +36,26 @@ function HeroSection() {
               className="hero-primary-btn"
               onClick={() =>
                 navigate(
-                  `/complexes/${featuredCourt._id}/booking`
+                  `/complexes/${featuredCourt.slug}`
                 )
               }
             >
-              Đặt sân ngay
+              <CalendarDays size={18} /> Đặt sân ngay
             </button>
 
             <button
               className="hero-secondary-btn"
               onClick={() =>
-                navigate(`/complexes/${featuredCourt._id}`)
+                navigate(`/complexes/search`)
               }
             >
-              Xem sân
+              <Eye size={18} /> Xem sân
+            </button>
+            <button
+              className="hero-secondary-btn hero-map-btn"
+              onClick={() => navigate("/map")}
+            >
+              <MapPinned size={18} /> Xem bản đồ
             </button>
           </div>
         </div>
@@ -64,7 +75,7 @@ function HeroSection() {
       </div>
 
       <div className="hero-search">
-        
+
       </div>
     </section>
   );

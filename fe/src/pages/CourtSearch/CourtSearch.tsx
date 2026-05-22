@@ -4,6 +4,8 @@ import CourtSearchCard from "../../components/common/CourtSearchCard/CourtSearch
 import Pagination from "../../components/common/Pagination/Pagination";
 import axios from "../../utils/axios.customize";
 import "./CourtSearch.css";
+import { MapPinned } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 interface CourtItem {
   _id: string;
@@ -35,6 +37,7 @@ function CourtSearch() {
   const [error, setError] = useState<string | null>(null);
   const [totalPages, setTotalPages] = useState(0);
   const pageSize = 9;
+  const navigate = useNavigate();
 
   const mergeUniqueCourts = (groups: CourtItem[][]) => {
     const map = new Map<string, CourtItem>();
@@ -109,8 +112,20 @@ function CourtSearch() {
   return (
     <main className="court-search-page">
       <header className="search-header">
-        <h1>Tìm kiếm sân</h1>
-        <p>Tìm sân theo tên hoặc vị trí</p>
+        <div className="search-header-content">
+          <div>
+            <h1>Tìm kiếm sân</h1>
+            <p>Tìm sân theo tên hoặc vị trí</p>
+          </div>
+
+          <button
+            className="go-map-btn"
+            onClick={() => navigate("/map")}
+          >
+            <MapPinned size={18} />
+            Xem bản đồ
+          </button>
+        </div>
       </header>
 
       <SearchBar
