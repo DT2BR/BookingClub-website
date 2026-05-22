@@ -149,7 +149,7 @@ const normalizeFeaturedTab = (tab) => {
   const normalized = String(tab || "all").trim().toLowerCase();
 
   if (["all", "recommended", "recent", "popular"].includes(normalized)) {
-    return normalized === "popular" ? "recommended" : normalized;
+    return normalized;
   }
 
   throw new Error("Invalid featured tab");
@@ -549,6 +549,55 @@ export const getFeaturedCourtsService = async ({ tab = "all", userId = null } = 
         sortCondition: {
           orderIndex: 1,
         },
+        extraAddFields: [
+          {
+            orderIndex: {
+              $indexOfArray: [orderedComplexIds, "$_id"],
+            },
+          },
+        ],
+      })
+    );
+
+    return {
+      tab: normalizedTab,
+      total: complexes.length,
+      items: complexes.map(mapFeaturedCourt),
+    };
+  }
+
+  if (normalizedTab === "popular") {
+    // Popular = top complexes by booking count
+    const popularBookings = await Booking.aggregate([
+      {
+        $match: {
+          status: { $in: ["pending", "confirmed", "completed"] },
+        },
+      },
+      {
+        $group: {
+          _id: "$complex_id",
+          bookingCount: { $sum: 1 },
+        },
+      },
+      { $sort: { bookingCount: -1 } },
+      { $limit: FEATURED_LIMIT },
+    ]);
+
+    if (!popularBookings.length) {
+      return {
+        tab: normalizedTab,
+        total: 0,
+        items: [],
+      };
+    }
+
+    const orderedComplexIds = popularBookings.map((b) => b._id);
+
+    const complexes = await SportComplex.aggregate(
+      buildFeaturedCardPipeline({
+        matchCondition: { _id: { $in: orderedComplexIds } },
+        sortCondition: { orderIndex: 1 },
         extraAddFields: [
           {
             orderIndex: {
