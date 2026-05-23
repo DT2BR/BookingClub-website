@@ -32,8 +32,8 @@ return (
     
     <aside className="sidebar">
         <div className="sidebar-logo-section">
-          <h1 className="sidebar-title">CourtMaster</h1>
-          <p className="sidebar-subtitle">Player Portal</p>
+          <h1 className="sidebar-title">Booking Management</h1>
+          <p className="sidebar-subtitle">Help Desk</p>
         </div>
 
         <nav className="nav-menu">
