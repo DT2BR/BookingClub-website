@@ -19,15 +19,6 @@ interface CourtItem {
   [key: string]: any;
 }
 
-interface SearchResponse {
-  sportComplexes: CourtItem[];
-  pagination: {
-    totalItems: number;
-    totalPages: number;
-    currentPage: number;
-    limit: number;
-  };
-}
 
 function CourtSearch() {
   const [query, setQuery] = useState("");
@@ -74,7 +65,7 @@ function CourtSearch() {
 
       const responses = await Promise.all(
         requestConfigs.map((params) =>
-          axios.get<SearchResponse>('/api/v1/sportcomplex/search', {
+          axios.get("/api/v1/sportcomplex/search", {
             params: {
               ...params,
               page: targetPage,
@@ -84,8 +75,12 @@ function CourtSearch() {
         )
       );
 
-      const mergedCourts = mergeUniqueCourts(responses.map((response) => response.sportComplexes));
-      const maxPages = Math.max(...responses.map((response) => response.pagination.totalPages), 0);
+      // axios.customize has a response interceptor that returns `response.data` directly,
+      // so `responses` is actually an array of data objects at runtime. Use `any` here
+      // to match runtime behavior and avoid TypeScript errors.
+      const responseData = responses as any[];
+      const mergedCourts = mergeUniqueCourts(responseData.map((response) => response.sportComplexes || []));
+      const maxPages = Math.max(...responseData.map((response) => response.pagination?.totalPages || 0), 0);
 
       setResults(mergedCourts);
       setTotalPages(maxPages);

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./CourtSearchCard.css";
 
 interface Props {
@@ -30,21 +31,25 @@ const CourtSearchCard: React.FC<Props> = ({ court }) => {
   const primaryFieldImage = Array.isArray(court.fieldImages) ? court.fieldImages[0] : undefined;
   const imageUrl = firstImage || primaryFieldImage?.image_url || court.primaryImage?.image_url || defaultImage;
   
+  const targetSlug = court.slug || court._id;
+
   return (
-    <article className="court-card">
-      <div className="card-image-wrap">
-        <img src={imageUrl} alt={primaryFieldImage?.alt_text || court.name} />
-      </div>
-      <div className="card-body">
-        <h3 className="card-title">{court.name}</h3>
-        <p className="card-address">{court.address}</p>
-        <p className="card-location">
-          {court.district && <span>{court.district}</span>}
-          {court.city && <span> • {court.city}</span>}
-        </p>
-        {court.phone && <p className="card-phone">{court.phone}</p>}
-      </div>
-    </article>
+    <Link to={`/complexes/${targetSlug}`} className="court-card-link" aria-label={`Open ${court.name}`}>
+      <article className="court-card">
+        <div className="card-image-wrap">
+          <img src={imageUrl} alt={primaryFieldImage?.alt_text || court.name} />
+        </div>
+        <div className="card-body">
+          <h3 className="card-title">{court.name}</h3>
+          <p className="card-address">{court.address}</p>
+          <p className="card-location">
+            {court.district && <span>{court.district}</span>}
+            {court.city && <span> • {court.city}</span>}
+          </p>
+          {court.phone && <p className="card-phone">{court.phone}</p>}
+        </div>
+      </article>
+    </Link>
   );
 };
 
