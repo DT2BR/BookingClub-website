@@ -63,7 +63,7 @@ function FeaturedCourtsSection() {
         );
 
         if (isMounted) {
-          setCourts(response.data.items || []);
+          setCourts(response.items || []);
         }
       } catch (loadError) {
         if (isMounted) {

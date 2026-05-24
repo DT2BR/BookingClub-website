@@ -22,8 +22,8 @@ export interface FeaturedCourtsResponse {
   items: FeaturedCourtItem[];
 }
 
-export const getFeaturedCourtsApi = (tab: string) => {
+export const getFeaturedCourtsApi = (tab: string): Promise<FeaturedCourtsResponse> => {
   return axios.get<FeaturedCourtsResponse>("/api/v1/sportcomplex/featured", {
     params: { tab },
-  });
+  }) as unknown as Promise<FeaturedCourtsResponse>;
 };
