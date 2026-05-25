@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 import {
   CalendarDays,
   Eye,
@@ -8,9 +9,49 @@ import {
 import { featuredCourt } from "../mockData";
 
 import "./HeroSection.css";
+import {
+  getFeaturedCourtsApi,
+  type FeaturedCourtItem,
+} from "../../../services/home.api";
 
 function HeroSection() {
   const navigate = useNavigate();
+  const [activeTab, setActiveTab] = useState("Tất cả");
+  const [courts, setCourts] = useState<FeaturedCourtItem[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    let isMounted = true;
+
+    const loadFeaturedCourts = async () => {
+      setIsLoading(true);
+      setError(null);
+
+      try {
+        const response = await getFeaturedCourtsApi("all");
+
+        if (isMounted) {
+          setCourts(response.items || []);
+        }
+      } catch (loadError) {
+        if (isMounted) {
+          setCourts([]);
+          setError("Không tải được sân nổi bật. Vui lòng thử lại.");
+        }
+      } finally {
+        if (isMounted) {
+          setIsLoading(false);
+        }
+      }
+    };
+
+    loadFeaturedCourts();
+
+    return () => {
+      isMounted = false;
+    };
+  }, [activeTab]);
 
   return (
     <section className="hero-section">
@@ -36,7 +77,7 @@ function HeroSection() {
               className="hero-primary-btn"
               onClick={() =>
                 navigate(
-                  `/complexes/${featuredCourt.slug}`
+                  `/complexes/${courts[0]?.slug}`
                 )
               }
             >
@@ -49,7 +90,7 @@ function HeroSection() {
                 navigate(`/complexes/search`)
               }
             >
-              <Eye size={18} /> Xem sân
+              <Eye size={18} /> Xem thêm sân
             </button>
             <button
               className="hero-secondary-btn hero-map-btn"
@@ -62,14 +103,14 @@ function HeroSection() {
 
         <div className="hero-right">
           <img
-            src={featuredCourt.image}
-            alt={featuredCourt.name}
+            src={courts[0]?.image_url}
+            alt={courts[0]?.image_alt}
           />
 
           <div className="hero-court-info">
-            <h3>{featuredCourt.name}</h3>
+            <h3>{courts[0]?.name}</h3>
 
-            <p>{featuredCourt.location}</p>
+            <p>{courts[0]?.address}</p>
           </div>
         </div>
       </div>

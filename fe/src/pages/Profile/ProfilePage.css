@@ -1,15 +1,24 @@
 /* Tổng quan */
 .profile-wrapper {
   display: flex;
-  justify-content: center;
-  padding: 40px 20px;
+  align-items: stretch;
+  padding: 0px 40px 0px 0;
   background-color: #f3f4f6;
   font-family: 'Inter', sans-serif;
+  /* min-height: 100vh; */
+}
+
+.profile-wrapper .sidebar {
+  flex-shrink: 0;
+  width: 260px;
+  align-self: stretch;
 }
 
 .profile-container {
+  flex: 1;
   width: 100%;
-  max-width: 800px;
+  max-width: 900px;
+  margin: 0 auto;
   background-color: #ffffff;
   border-radius: 16px;
   overflow: hidden;
