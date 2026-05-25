@@ -6,6 +6,7 @@ const publicRoutes = [
     { method: "POST", path: "/api/v1/refresh" },
     { method: "POST", path: "/api/v1/verify-email" },
     { method: "GET", path: "/api/v1/verify-email" },
+        { method: "GET", path: "/api/v1/verify-email/confirm" },
     { method: "POST", path: "/api/v1/resend-verification-email" },
     { method: "POST", path: "/api/v1/forgot-password" },
     { method: "POST", path: "/api/v1/reset-password" },

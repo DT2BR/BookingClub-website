@@ -23,7 +23,7 @@ const createTransporter = () => {
   });
 };
 
-export const sendMail = async ({ to, subject, text, html }) => {
+export const sendMail = async ({ to, subject, text, html, attachments }) => {
   const transporter = createTransporter();
 
   if (!transporter) {
@@ -37,7 +37,8 @@ export const sendMail = async ({ to, subject, text, html }) => {
       to,
       subject,
       text,
-      html
+      html,
+      attachments
     });
   } catch (error) {
     const message = String(error?.message || error);

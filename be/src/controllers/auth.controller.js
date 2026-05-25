@@ -118,6 +118,22 @@ export const verifyEmail = async (req, res) => {
   }
 };
 
+export const verifyEmailConfirm = async (req, res) => {
+  try {
+    const token = getTokenFromRequest(req);
+
+    await verifyEmailService({ token });
+
+    const clientUrl = (process.env.CLIENT_URL || "http://localhost:5173").replace(/\/$/, "");
+    // redirect to FE verify page with success
+    return res.redirect(`${clientUrl}/verify-email?status=success`);
+  } catch (err) {
+    const clientUrl = (process.env.CLIENT_URL || "http://localhost:5173").replace(/\/$/, "");
+    const message = encodeURIComponent(err.message || "Verification failed");
+    return res.redirect(`${clientUrl}/verify-email?status=error&message=${message}`);
+  }
+};
+
 export const resendVerificationEmail = async (req, res) => {
   try {
     const { email } = req.body;

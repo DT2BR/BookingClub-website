@@ -52,9 +52,20 @@ interface LogoutResponse {
   message: string;
 }
 
+interface VerifyEmailResponse {
+  message: string;
+  user: User;
+}
+
 const logoutApi = (): Promise<LogoutResponse> => {
   
   return axios.post("/api/v1/logout");
+};
+
+const verifyEmailApi = (token: string): Promise<VerifyEmailResponse> => {
+  return axios.get("/api/v1/verify-email", {
+    params: { token }
+  });
 };
 
 // Cập nhật thông tin cơ bản (Gửi JSON thuần)
@@ -72,6 +83,7 @@ export {
   loginApi,
   getMeApi,
   logoutApi,
+  verifyEmailApi,
   updateMeApi,
   updatePasswordApi
 };

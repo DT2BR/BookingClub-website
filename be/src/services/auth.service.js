@@ -3,6 +3,7 @@ import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import crypto from "crypto";
 import { sendMail } from "./email.service.js";
+import { buildResetPasswordEmailHtml, buildVerificationEmailHtml } from "../utils/email.templates.js";
 import { createAccessToken, createRefreshToken } from "../utils/jwt.js"
 
 const getApiBaseUrl = () => (process.env.API_BASE_URL || "http://localhost:5001").replace(/\/$/, "");
@@ -24,8 +25,8 @@ const mapUser = (user) => ({
   created_at: user.created_at
 });
 
-const buildVerificationLink = (token) => `${getApiBaseUrl()}/api/v1/verify-email?token=${token}`;
-const buildResetLink = (token) => `${getClientUrl()}/reset-password?token=${token}`;
+const buildVerificationLink = (token) => `${getApiBaseUrl()}/api/v1/verify-email/confirm?token=${encodeURIComponent(token)}`;
+const buildResetLink = (token) => `${getClientUrl()}/reset-password?token=${encodeURIComponent(token)}`;
 
 const sendVerificationEmail = async ({ email, phone, token }) => {
   const verificationLink = buildVerificationLink(token);
@@ -34,7 +35,10 @@ const sendVerificationEmail = async ({ email, phone, token }) => {
     to: email,
     subject: "BookingClub - Verify your email",
     text: `Hi ${phone || email}, verify your email here: ${verificationLink}`,
-    html: `<p>Hi ${phone || email},</p><p>Please verify your email by clicking this link:</p><p><a href="${verificationLink}">${verificationLink}</a></p>`
+    html: buildVerificationEmailHtml({
+      recipientName: phone || email,
+      verificationLink
+    })
   });
 
   return verificationLink;
@@ -47,7 +51,10 @@ const sendResetPasswordEmail = async ({ email, phone, token }) => {
     to: email,
     subject: "BookingClub - Reset your password",
     text: `Hi ${phone || email}, reset your password here: ${resetLink}`,
-    html: `<p>Hi ${phone || email},</p><p>Use this link to reset your password:</p><p><a href="${resetLink}">${resetLink}</a></p>`
+    html: buildResetPasswordEmailHtml({
+      recipientName: phone || email,
+      resetLink
+    })
   });
 
   return resetLink;
@@ -224,7 +231,6 @@ users.forEach((u) => {
   
   console.log("Forgot password request for email:", email);
   const user = await User.findOne({ email });
-  console.log("User found:", user);
   if (!user) {
     throw new Error("User not found");
   }
