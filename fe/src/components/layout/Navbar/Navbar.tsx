@@ -29,9 +29,6 @@ function Navbar() {
               Bản đồ
             </Link>
 
-            <Link to="/complexes/san-bong-thang-long">
-              Test Booking
-            </Link>
             {user && (
               <Link to="/management">
                 Lịch sử đặt sân
