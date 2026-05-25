@@ -162,12 +162,12 @@ function FeaturedCourtsSection() {
           ))}
         </div>
       )}
-
+{/* 
       <div className="view-more-wrapper">
         <button className="view-more-btn">
           Xem thêm
         </button>
-      </div>
+      </div> */}
     </section>
   );
 }

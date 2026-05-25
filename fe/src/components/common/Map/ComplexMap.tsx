@@ -141,10 +141,10 @@ function ComplexMap({ geoData, }: Props) {
             <div className="complex-map-container">
                 <MapContainer
                     center={[
-                        10.7720085,
-                        106.6642186,
+                        10.7580319,
+                        106.6849531,
                     ]}
-                    zoom={11}
+                    zoom={12}
                     className="complex-map"
                     ref={mapRef}
                 >

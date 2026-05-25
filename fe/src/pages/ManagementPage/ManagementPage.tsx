@@ -19,7 +19,7 @@ import {
   ArrowRight,
   Plus
 } from 'lucide-react';
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, color } from "framer-motion";
 import './ManagementPage.scss';
 import type { Booking } from '../../services/booking.api';
 import {  createVnpayPaymentApi, getBookingOfUserApi, getNextBookingOfUserApi } from '../../services/booking.api';
@@ -320,16 +320,16 @@ const ManagementPage = () => {
             transition={{ delay: 0.3 }}
             className="promo-card"
           >
-            <img 
+            {/* <img 
               src="https://images.unsplash.com/photo-1541250848049-b4f71413cc30?q=80&w=600&auto=format&fit=crop" 
               className="promo-bg-img"
               alt="Tennis court"
               referrerPolicy="no-referrer"
-            />
+            /> */}
             <div className="promo-content">
               <p className="promo-tag">Ready for a match?</p>
               <h3 className="promo-title">Đặt sân nhanh</h3>
-              <button className="quick-book-btn">
+              <button className="quick-book-btn" onClick={() => navigate('/complexes/search')}>
                 <PlusCircle size={18} />
                 Quick Book
               </button>

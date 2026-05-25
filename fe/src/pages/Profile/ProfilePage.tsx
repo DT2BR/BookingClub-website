@@ -7,6 +7,7 @@ import ChangePasswordModal from "../../components/common/ProfileModals/ChangePas
 import { Map, Award, Target, Lock, ShieldAlert, KeyRound, Mail } from 'lucide-react';
 import defaultAvatar from "../../assets/avatar-placeholder.png"; 
 import "./ProfilePage.css";
+import SideBar from "../../components/common/SideBar/SideBar";
 
 const ProfilePage: React.FC = () => {
   const navigate = useNavigate();
@@ -179,6 +180,7 @@ const ProfilePage: React.FC = () => {
 
   return (
     <div className="profile-wrapper">
+        <SideBar />
       <div className="profile-container">
         
         <div className="profile-header">
