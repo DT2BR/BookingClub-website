@@ -3,9 +3,157 @@ import SportComplex from "../models/sport_complex.model.js";
 import SubField from "../models/sub_field.model.js";
 import Owner from "../models/owner.model.js";
 import Review from "../models/review.model.js";
+import Booking from "../models/booking.model.js";
 import FieldTypeConfig from "../models/field_type_configs.model.js";
 import PricingRule from "../models/pricing_rule.model.js";
+import mongoose from "mongoose";
 import { removeVietnameseAccents, escapeRegex } from "../utils/vietnamese.util.js";
+
+const FEATURED_LIMIT = 4;
+
+const formatCurrencyVnd = (value) => {
+  if (!Number.isFinite(value) || value <= 0) {
+    return "0đ";
+  }
+
+  return `${new Intl.NumberFormat("vi-VN").format(value)}đ`;
+};
+
+const buildFeaturedCardPipeline = ({ matchCondition = {}, sortCondition = { createdAt: -1 }, limit = FEATURED_LIMIT, extraAddFields = [] } = {}) => {
+  return [
+    { $match: matchCondition },
+    {
+      $lookup: {
+        from: FieldImage.collection.name,
+        let: { complexId: "$_id" },
+        pipeline: [
+          { $match: { $expr: { $eq: ["$complex_id", "$$complexId"] } } },
+          { $sort: { is_primary: -1, created_at: 1 } },
+          { $limit: 1 },
+          {
+            $project: {
+              _id: 0,
+              image_url: 1,
+              image_type: 1,
+              is_primary: 1,
+              alt_text: 1,
+            },
+          },
+        ],
+        as: "coverImage",
+      },
+    },
+    {
+      $lookup: {
+        from: FieldTypeConfig.collection.name,
+        let: { complexId: "$_id" },
+        pipeline: [
+          { $match: { $expr: { $eq: ["$complex_id", "$$complexId"] } } },
+          { $match: { is_active: true } },
+          { $sort: { base_price: 1, field_type: 1 } },
+          {
+            $project: {
+              _id: 1,
+              complex_id: 1,
+              field_type: 1,
+              base_price: 1,
+              is_active: 1,
+            },
+          },
+        ],
+        as: "fieldTypeConfigs",
+      },
+    },
+    {
+      $lookup: {
+        from: Review.collection.name,
+        let: { complexId: "$_id" },
+        pipeline: [
+          { $match: { $expr: { $eq: ["$complex_id", "$$complexId"] } } },
+          {
+            $group: {
+              _id: null,
+              totalReviews: { $sum: 1 },
+              avgRating: { $avg: "$rating" },
+            },
+          },
+        ],
+        as: "reviewStats",
+      },
+    },
+    {
+      $unwind: {
+        path: "$reviewStats",
+        preserveNullAndEmptyArrays: true,
+      },
+    },
+    {
+      $addFields: {
+        coverImage: { $arrayElemAt: ["$coverImage", 0] },
+        activeBasePrices: {
+          $map: {
+            input: "$fieldTypeConfigs",
+            as: "config",
+            in: "$$config.base_price",
+          },
+        },
+        avgRating: { $ifNull: ["$reviewStats.avgRating", 0] },
+        totalReviews: { $ifNull: ["$reviewStats.totalReviews", 0] },
+        ...extraAddFields.reduce((accumulator, item) => Object.assign(accumulator, item), {}),
+      },
+    },
+    {
+      $addFields: {
+        priceValue: {
+          $ifNull: [{ $min: "$activeBasePrices" }, 0],
+        },
+        imageUrl: { $ifNull: ["$coverImage.image_url", ""] },
+        imageAlt: { $ifNull: ["$coverImage.alt_text", ""] },
+      },
+    },
+    { $sort: sortCondition },
+    { $limit: limit },
+    {
+      $project: {
+        coverImage: 0,
+        fieldTypeConfigs: 0,
+        reviewStats: 0,
+        activeBasePrices: 0,
+      },
+    },
+  ];
+};
+
+const mapFeaturedCourt = (court) => {
+  const avgRating = Number((court.avgRating ?? 0).toFixed(1));
+  const priceValue = Number(court.priceValue ?? 0);
+
+  return {
+    _id: court._id,
+    name: court.name,
+    slug: court.slug,
+    address: court.address,
+    city: court.city,
+    district: court.district,
+    sport_type: court.sport_type,
+    image_url: court.imageUrl || "",
+    image_alt: court.imageAlt || court.name,
+    price_value: priceValue,
+    price_display: formatCurrencyVnd(priceValue),
+    rating: avgRating,
+    review_count: Number(court.totalReviews ?? 0),
+  };
+};
+
+const normalizeFeaturedTab = (tab) => {
+  const normalized = String(tab || "all").trim().toLowerCase();
+
+  if (["all", "recommended", "recent", "popular"].includes(normalized)) {
+    return normalized;
+  }
+
+  throw new Error("Invalid featured tab");
+};
 
 const getSportComplexDetailsService = async (slug) => {
   const result = await SportComplex.aggregate([
@@ -350,6 +498,138 @@ export const getComplexesMapService = async () => {
   return {
     type: "FeatureCollection",
     features: complexes,
+  };
+};
+
+export const getFeaturedCourtsService = async ({ tab = "all", userId = null } = {}) => {
+  const normalizedTab = normalizeFeaturedTab(tab);
+
+  if (normalizedTab === "recent") {
+    if (!userId || !mongoose.Types.ObjectId.isValid(userId)) {
+      return {
+        tab: normalizedTab,
+        total: 0,
+        items: [],
+      };
+    }
+
+    const recentBookings = await Booking.aggregate([
+      {
+        $match: {
+          user_id: new mongoose.Types.ObjectId(userId),
+          status: { $in: ["pending", "confirmed", "completed"] },
+        },
+      },
+      { $sort: { createdAt: -1 } },
+      {
+        $group: {
+          _id: "$complex_id",
+          latestBookingAt: { $first: "$createdAt" },
+        },
+      },
+      { $sort: { latestBookingAt: -1 } },
+      { $limit: FEATURED_LIMIT },
+    ]);
+
+    if (!recentBookings.length) {
+      return {
+        tab: normalizedTab,
+        total: 0,
+        items: [],
+      };
+    }
+
+    const orderedComplexIds = recentBookings.map((booking) => booking._id);
+
+    const complexes = await SportComplex.aggregate(
+      buildFeaturedCardPipeline({
+        matchCondition: {
+          _id: { $in: orderedComplexIds },
+        },
+        sortCondition: {
+          orderIndex: 1,
+        },
+        extraAddFields: [
+          {
+            orderIndex: {
+              $indexOfArray: [orderedComplexIds, "$_id"],
+            },
+          },
+        ],
+      })
+    );
+
+    return {
+      tab: normalizedTab,
+      total: complexes.length,
+      items: complexes.map(mapFeaturedCourt),
+    };
+  }
+
+  if (normalizedTab === "popular") {
+    // Popular = top complexes by booking count
+    const popularBookings = await Booking.aggregate([
+      {
+        $match: {
+          status: { $in: ["pending", "confirmed", "completed"] },
+        },
+      },
+      {
+        $group: {
+          _id: "$complex_id",
+          bookingCount: { $sum: 1 },
+        },
+      },
+      { $sort: { bookingCount: -1 } },
+      { $limit: FEATURED_LIMIT },
+    ]);
+
+    if (!popularBookings.length) {
+      return {
+        tab: normalizedTab,
+        total: 0,
+        items: [],
+      };
+    }
+
+    const orderedComplexIds = popularBookings.map((b) => b._id);
+
+    const complexes = await SportComplex.aggregate(
+      buildFeaturedCardPipeline({
+        matchCondition: { _id: { $in: orderedComplexIds } },
+        sortCondition: { orderIndex: 1 },
+        extraAddFields: [
+          {
+            orderIndex: {
+              $indexOfArray: [orderedComplexIds, "$_id"],
+            },
+          },
+        ],
+      })
+    );
+
+    return {
+      tab: normalizedTab,
+      total: complexes.length,
+      items: complexes.map(mapFeaturedCourt),
+    };
+  }
+
+  const sortCondition =
+    normalizedTab === "recommended"
+      ? { avgRating: -1, totalReviews: -1, createdAt: -1 }
+      : { createdAt: -1 };
+
+  const complexes = await SportComplex.aggregate(
+    buildFeaturedCardPipeline({
+      sortCondition,
+    })
+  );
+
+  return {
+    tab: normalizedTab,
+    total: complexes.length,
+    items: complexes.map(mapFeaturedCourt),
   };
 };
 

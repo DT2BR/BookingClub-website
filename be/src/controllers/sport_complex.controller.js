@@ -1,4 +1,5 @@
-import { getSportComplexDetailsService, searchSportComplexService, getComplexesMapService } from "../services/sport_complex.service.js";
+import jwt from "jsonwebtoken";
+import { getSportComplexDetailsService, searchSportComplexService, getComplexesMapService, getFeaturedCourtsService } from "../services/sport_complex.service.js";
 
 const getSportComplexDetails = async (req, res) => {
     try {
@@ -67,4 +68,31 @@ export const getComplexesMapController = async (req, res) => {
     }
   };
 
-export { getSportComplexDetails, searchSportComplex, getSportComplexByNearbyLocation };
+    const getOptionalUserIdFromRequest = (req) => {
+        const token = req.cookies?.access_token;
+
+        if (!token) {
+            return null;
+        }
+
+        try {
+            const decoded = jwt.verify(token, process.env.JWT_SECRET);
+            return decoded?.id || null;
+        } catch {
+            return null;
+        }
+    };
+
+    const getFeaturedCourts = async (req, res) => {
+        try {
+            const tab = req.query.tab || "all";
+            const userId = getOptionalUserIdFromRequest(req);
+            const data = await getFeaturedCourtsService({ tab, userId });
+
+            return res.status(200).json(data);
+        } catch (err) {
+            return res.status(400).json({ message: err.message });
+        }
+    };
+
+    export { getSportComplexDetails, searchSportComplex, getSportComplexByNearbyLocation, getFeaturedCourts };
