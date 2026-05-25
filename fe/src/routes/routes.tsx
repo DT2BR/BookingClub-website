@@ -12,6 +12,7 @@ import CourtInfo from "../pages/CourtInfo/CourtInfo.tsx"
 import ManagementPage from "../pages/ManagementPage/ManagementPage.tsx"
 import ComplexMapPage from "../pages/Map/ComplexMapPage.tsx"
 import VerifyEmail from "../pages/VerifyEmail/VerifyEmail.tsx"
+import BookingDetail from "../pages/BookingDetail/BookingDetail.tsx"
 
 
 function AppRoutes() {
@@ -34,6 +35,7 @@ function AppRoutes() {
       <Route path="/payment/failed" element={<PaymentFailed />} />
       <Route path="/management" element={<ManagementPage />} />
       <Route path="/map" element={<ComplexMapPage />} />
+      <Route path="/booking-detail/:id" element={<BookingDetail />} />
     </Routes>
   )
 }

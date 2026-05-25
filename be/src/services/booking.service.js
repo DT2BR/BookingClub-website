@@ -6,6 +6,8 @@ import FieldTypeConfig from "../models/field_type_configs.model.js";
 import mongoose from "mongoose";
 import { CalculatePrice } from "./subfield.service.js";
 import SportComplex from "../models/sport_complex.model.js";
+import FieldImage from "../models/field_image.model.js";
+import { generateQR } from "../utils/qrcode.js";
 const timeToMinutes = (time) => {
   const [h, m] = time.split(":").map(Number);
 
@@ -276,10 +278,9 @@ export const getBookingOfUser = async (userId, searchKeyword, statusFilter, page
     .sort({ createdAt: -1 })
     .skip(skip)
     .limit(limit)
-    .populate("complex_id", "name")
-    .select("_id complex_id booking_date total_price status")
+    .populate("complex_id", "name address sport_type")
+    .select("_id complex_id booking_date total_price status qr_code_url ")
     .lean();
-
   return { bookings, total };
 };
 
@@ -335,4 +336,47 @@ export const getNextBookingOfUser = async (userId, stateStatus) => {
     console.error("Lỗi khi lấy thông tin booking stats:", error);
     throw error;
   }
+};
+
+export const getBookingDetailService = async (user_id, bookingId) => {
+  const booking = await Booking.findOne({ _id: bookingId, user_id: user_id });
+  if (!booking) {
+    throw new Error("Không tìm thấy đơn hàng hoặc bạn không có quyền xem đơn hàng này!");
+  }
+
+  const details = await BookingDetails.find({ booking_id: bookingId })
+  .populate({
+    path: "sub_field_id",
+    select: "field_name config_id", 
+    populate: {
+      path: "config_id",
+      select: "field_type", 
+    },
+  })
+  .lean(); 
+
+  const formattedList = details.map((item) => ({
+    _id: item._id.toString(),
+    booking_id: item.booking_id.toString(),
+    sub_field_id: {
+      _id: item.sub_field_id?._id?.toString() || "",
+      name: item.sub_field_id?.field_name || "Sân chưa đặt tên",
+      field_type: item.sub_field_id?.config_id?.field_type || "unknown",
+    },
+    play_date: item.play_date,
+    price: item.price,
+    start_time: item.start_time,
+    end_time: item.end_time,
+  }));
+
+  const primaryImage = await FieldImage.findOne({
+    complex_id: booking.complex_id,
+    image_type: "Overall",
+    is_primary: true
+  }).lean();
+  
+  return {
+    ListBookingDetail: formattedList,
+    primary_image_url: primaryImage?.image_url || "https://images.unsplash.com/photo-1541250848049-b4f71413cc30?q=80&w=600&auto=format&fit=crop"
+  };
 };

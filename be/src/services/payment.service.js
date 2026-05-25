@@ -2,7 +2,7 @@ import Booking from "../models/booking.model.js";
 import Payment from "../models/payment.model.js";
 import { VNPay, ProductCode, VnpLocale, ignoreLogger } from "vnpay";
 import { formatDate } from "../utils/date.js";
-
+import { generateQR } from "../utils/qrCode.js";
 export const createVnpayPayment = async (bookingId, userId) => {
     const booking = await Booking.findOne({
         _id: bookingId,
@@ -134,6 +134,7 @@ export const handleVnpayReturn = async (query) => {
     if (responseCode === "00") {
         payment.status = "Completed";
         booking.status = "confirmed";
+        booking.qr_code_url = await generateQR(bookingId);
     } else {
         payment.status = "Failed";
     }

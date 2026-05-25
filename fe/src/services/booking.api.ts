@@ -47,15 +47,17 @@ export interface Booking {
   complex_id: {
     _id: string;
     name: string;
+    address: string;
+    sport_type: string;
   };
 
   total_price: {
     $numberDecimal: string;
   };
-
   booking_date: string;
-
+  qr_code_url: string;
   status: "confirmed" | "completed" | "pending" | "cancelled";
+
 }
 
 export type FilterOption = 'Tất cả' | 'Hoàn thành' | 'Khác';
