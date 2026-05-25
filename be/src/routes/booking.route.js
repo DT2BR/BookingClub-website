@@ -4,7 +4,8 @@ import {
   createBookingController,
   getBookingOfUserController,
   getDetailReviewByUserId,
-  getNextBookingOfUserController
+  getNextBookingOfUserController,
+  getBookingDetailController
 } from "../controllers/booking.controller.js";
 import auth from "../middlewares/auth.middleware.js";
 import cookieUtils from "../utils/cookie.js";
@@ -16,4 +17,5 @@ bookingRouter.post("/", auth, cookieUtils.requireCsrf, createBookingController);
 bookingRouter.get("/history", auth, getBookingOfUserController);
 bookingRouter.get("/reviews/user-review/:bookingId", auth, getDetailReviewByUserId);
 bookingRouter.get("/next-booking", auth, getNextBookingOfUserController);
+bookingRouter.get("/:bookingId/details", auth, getBookingDetailController);
 export default bookingRouter;

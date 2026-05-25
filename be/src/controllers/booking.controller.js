@@ -2,7 +2,8 @@ import {
     createBooking,
     cancelBookingBeforePay,
     getBookingOfUser,
-    getNextBookingOfUser
+    getNextBookingOfUser,
+    getBookingDetailService,
 } from "../services/booking.service.js";
 import { getDetailReviewByUserIdService } from "../services/review.service.js";
 
@@ -114,6 +115,20 @@ export const getNextBookingOfUserController = async (req, res) => {
         const {totalBookings, booking} = await getNextBookingOfUser(user_id, stateStatus);
         return res.status(200).json({ totalBookings, booking });
     } catch (error) {
+        return res.status(400).json({
+            success: false,
+            message: error.message,
+        });
+    }
+}
+export const getBookingDetailController = async (req, res) => {
+    try {
+        const user_id = req.user.id;
+        const bookingId = req.params.bookingId;
+        const bookingDetail = await getBookingDetailService(user_id, bookingId);
+        console.log("Dữ liệu chi tiết booking được trả về từ service:", bookingDetail);
+        return res.status(200).json(bookingDetail);
+    }catch (error) {
         return res.status(400).json({
             success: false,
             message: error.message,

@@ -22,9 +22,8 @@ import {
 import { motion, AnimatePresence } from "framer-motion";
 import './ManagementPage.scss';
 import type { Booking } from '../../services/booking.api';
-import {  getBookingOfUserApi, getNextBookingOfUserApi } from '../../services/booking.api';
+import {  createVnpayPaymentApi, getBookingOfUserApi, getNextBookingOfUserApi } from '../../services/booking.api';
 import { useAuth } from '../../contexts/AuthContext';
-import { logoutApi } from "../../services/auth.api";
 import { useNavigate } from "react-router";
 import  Modal  from '../../components/common/Modal/Modal.tsx';
 import { ReviewForm } from '../../features/Review/ReviewForm.tsx';
@@ -189,14 +188,27 @@ const ManagementPage = () => {
   };
 
   // Ham thanh toan
-  const handlePayment = async () => {
+  const handlePayment = async (bookingId: string) => {
     try {
       // Implementation for payment
+       const paymentRes = await createVnpayPaymentApi(bookingId);
+       window.location.href = paymentRes.paymentUrl; 
     } catch (error) {
       console.error("Payment failed:", error);
     }
   };
   
+  // Ham xem chi tiet booking
+  const handleViewDetails = (booking: Booking) => {
+    navigate(`/booking-detail/${booking._id}`,
+      {
+        state: {
+          bookingData: booking,
+        }
+      }
+    );
+    
+  }
     return (
       <div className="management-page">
         <div className="app-container">
@@ -444,7 +456,10 @@ const ManagementPage = () => {
         {/* Actions */}
         <td className="text-right">
           <div className="row-actions">
-            <button className="action-eye-btn">
+            <button 
+            className="action-eye-btn"
+            onClick={() => handleViewDetails(booking)}
+            >
               <Eye size={16} />
             </button>
 
@@ -454,7 +469,7 @@ const ManagementPage = () => {
                 Review
               </button>
             ) : booking.status === "pending" ? (
-              <button className="action-payment-btn " onClick={() => handlePayment}>
+              <button className="action-payment-btn " onClick={() => handlePayment(booking._id)}>
                 Make Payment
               </button>
             ) : null
