@@ -11,6 +11,7 @@ import HomePage from "../pages/HomePage/HomePage.tsx"
 import CourtInfo from "../pages/CourtInfo/CourtInfo.tsx"
 import ManagementPage from "../pages/ManagementPage/ManagementPage.tsx"
 import ComplexMapPage from "../pages/Map/ComplexMapPage.tsx"
+import VerifyEmail from "../pages/VerifyEmail/VerifyEmail.tsx"
 import BookingDetail from "../pages/BookingDetail/BookingDetail.tsx"
 
 
@@ -20,6 +21,7 @@ function AppRoutes() {
       <Route path="/" element={<HomePage />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
+      <Route path="/verify-email" element={<VerifyEmail />} />
       <Route path="/me" element={<Me />} />
 
       <Route path="/profile" element={<ProfilePage />} /> {/* Đổi URL thành /profile */}

@@ -39,7 +39,6 @@ app.use(
   })
 );
 
-console.log(process.env.MONGO_URI);
 connectDB();
 app.use(cookieParser());
 app.use(express.json());

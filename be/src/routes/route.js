@@ -3,6 +3,7 @@ import {
   login,
   register,
   verifyEmail,
+  verifyEmailConfirm,
   resendVerificationEmail,
   forgotPassword,
   resetPassword,
@@ -41,6 +42,7 @@ router.post("/login", limiter, login); //trong 1 phut chi request duoc 10 lan
 router.post("/refresh", cookieUtils.requireCsrf, refreshController);
 router.post("/logout",cookieUtils.requireCsrf, logout);
 router.get("/verify-email", verifyEmail);
+router.get("/verify-email/confirm", verifyEmailConfirm);
 router.post("/verify-email", verifyEmail);
 router.post("/resend-verification-email", resendVerificationEmail);
 router.post("/forgot-password", forgotPassword);
